@@ -354,8 +354,11 @@ namespace CodePlex.SharePointInstaller
 
             if (newVersion != installedVersion)
             {
+                string upgradePrompt = string.Format(
+                    "Upgrade from version '{0}' to version '{1}'",
+                    installedVersion, newVersion);
                 Form.StoreNextTitle(Resources.CommonUIStrings.controlTitleUpgradeRemove);
-                Form.ContentControls.Add(Program.CreateUpgradeControl());
+                Form.ContentControls.Add(Program.CreateUpgradeControl(upgradePrompt));
             }
             else
             {
