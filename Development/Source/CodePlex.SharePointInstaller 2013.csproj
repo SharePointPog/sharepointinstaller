@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{825F2C99-8758-4171-B8BC-988C3D2926E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CodePlex.SharePointInstaller</RootNamespace>
+    <AssemblyName>Setup2013</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>SharePointInstaller.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;SP2013</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;SP2013</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActivationCommands.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActivationReporter.cs" />
+    <Compile Include="ActivationsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActivationsControl.Designer.cs">
+      <DependentUpon>ActivationsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CompatibilityDeployer.cs" />
+    <Compile Include="CompletionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompletionControl.designer.cs">
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExtendedTreeNode.cs">
+    </Compile>
+    <Compile Include="FeatureLocations.cs" />
+    <Compile Include="Resources\CommonUIStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CommonUIStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CommonUIStrings.en-US.Designer.cs">
+      <DependentUpon>CommonUIStrings.en-US.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SiteCollectionDeploymentTargetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SiteCollectionDeploymentTargetsControl.designer.cs">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FinishedControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FinishedControl.Designer.cs">
+      <DependentUpon>FinishedControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeploymentTargetsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DeploymentTargetsControl.designer.cs">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EULAControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EULAControl.designer.cs">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ILog.cs" />
+    <Compile Include="InstallConfiguration.cs" />
+    <Compile Include="InstallerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallerForm.designer.cs">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallException.cs" />
+    <Compile Include="InstallOptions.cs" />
+    <Compile Include="InstallProcessControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InstallProcessControl.designer.cs">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CompletionControl.resx">
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeploymentTargetsControl.resx">
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EULAControl.resx">
+      <DependentUpon>EULAControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerForm.resx">
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProcessControl.resx">
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairControl.resx">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemCheckControl.resx">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeControl.resx">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeControl.resx">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\DemoSolution.wsp">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\EULA.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SharePointInstaller.snk" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RepairControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RepairControl.Designer.cs">
+      <DependentUpon>RepairControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spver.cs" />
+    <Compile Include="SystemCheckControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SystemCheckControl.Designer.cs">
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpgradeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UpgradeControl.Designer.cs">
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WelcomeControl.Designer.cs">
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ActivationsControl.resx">
+      <DependentUpon>ActivationsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompletionControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CompletionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeploymentTargetsControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DeploymentTargetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EULAControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EULAControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FinishedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InstallerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallerForm.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InstallerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallProcessControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InstallProcessControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepairControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RepairControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CommonUIStrings.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonUIStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\CommonUIStrings.en-US.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CommonUIStrings.en-US.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteCollectionDeploymentTargetsControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteCollectionDeploymentTargetsControl.resx">
+      <DependentUpon>SiteCollectionDeploymentTargetsControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinishedControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FinishedControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Banner.bmp" />
+    <EmbeddedResource Include="Resources\CheckFail.gif" />
+    <EmbeddedResource Include="Resources\CheckOk.gif" />
+    <EmbeddedResource Include="Resources\CheckPlay.gif" />
+    <EmbeddedResource Include="Resources\CheckWait.gif" />
+    <EmbeddedResource Include="Resources\ErrorBig.gif" />
+    <EmbeddedResource Include="SystemCheckControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SystemCheckControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpgradeControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UpgradeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeControl.en-US.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WelcomeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Resources\readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

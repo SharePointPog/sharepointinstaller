@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="configuration" targetNamespace="http://sharepointinstaller.codeplex.com/config"
+           xmlns:cfg="http://sharepointinstaller.codeplex.com/config"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="" elementFormDefault="qualified">
+  <xs:element name="solutions">
+    <xs:annotation>
+      <xs:documentation>Root element for solutions configuration</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="solution" minOccurs="1" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:documentation>Contains configuration settings of a single solution</xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:all minOccurs="1" maxOccurs="1">
+              <xs:element name="parameters" type="cfg:solutionParameters" minOccurs="1" maxOccurs ="1">
+                <xs:annotation>
+                  <xs:documentation>Set of installation parameters (like version, title, etc)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="features" type="cfg:solutionFeatures" minOccurs="1" maxOccurs ="1">
+                <xs:annotation>
+                  <xs:documentation>List of features in the solution</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="run" type="cfg:solutionCommands" minOccurs="0" maxOccurs ="1">
+                <xs:annotation>
+                  <xs:documentation>Any number of post-install commands (shall contain only those declared in the commands configuration section)</xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:all>
+            <xs:attribute name="id" type="cfg:guid" use="required">
+              <xs:annotation>
+                <xs:documentation>ID of the solution (from manifest)</xs:documentation>
+              </xs:annotation>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="solutionParameters">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="parameter" type="cfg:solutionParameter" minOccurs="3" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="solutionFeatures">
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="feature" type="cfg:solutionFeature" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="solutionCommands">
+    <xs:annotation>
+      <xs:documentation></xs:documentation>
+    </xs:annotation>
+    <xs:sequence minOccurs="1" maxOccurs="1">
+      <xs:element name="command" type="cfg:solutionCommand" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="solutionParameter">
+    <xs:annotation>
+      <xs:documentation>
+        A parameter of the solution.
+        Required parameters are: Title, Version.
+        Optional parameters are: File, Url, Action, ReactivateFeatures.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="cfg:parameterName" use="required"/>
+    <xs:attribute name="value" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="solutionFeature">
+    <xs:annotation>
+      <xs:documentation>Feature of the solution which shall be considered during the installation</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>Friendly name to display during the installation process</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="id" type="cfg:guid" use="required">
+      <xs:annotation>
+        <xs:documentation>ID of the feature (from manifest)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="scope" type="cfg:featureScope" use="required">
+      <xs:annotation>
+        <xs:documentation>Feature scope (from manifest)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="url" type="xs:anyURI" use="optional">
+      <xs:annotation>
+        <xs:documentation>Indicates the only target for feature activation. When it’s specified the feature will only be activated under the given URL (if object of a proper scope exists there).</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="deactivateonly" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation>If true the feature should never be activated</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="solutionCommand">
+    <xs:annotation>
+      <xs:documentation>Post-install command</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>Command name (must be the same as in the section where the command is declared)</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="commandline" type="xs:string" use="required">
+      <xs:annotation>
+        <xs:documentation>Command line (stsadm syntax without exe name). Placeholders allowed: {AppURL}, {SiteURL}, {WebURL}.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:simpleType name="parameterName">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Title" >
+        <xs:annotation>
+          <xs:documentation>User friendly name of the solution to display</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Version">
+        <xs:annotation>
+          <xs:documentation>Version to store in the property bag (previous version is considered in upgrade action)</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="File">
+        <xs:annotation>
+          <xs:documentation>Path to the wsp file relative to the startup directory, If not specified only remove action is available</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Url">
+        <xs:annotation>
+          <xs:documentation>Makes a have pre-selected (and grayed out) option in Deployment Targets (for semi-automated deployments).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Action">
+        <xs:annotation>
+          <xs:documentation>Only applicable when the solution is already installed. Possible values: Repair, Remove, Upgrade. Makes pre-defined (and grayed out) selection of install operation (for semi-automated deployments).</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ReactivateFeatures">
+        <xs:annotation>
+          <xs:documentation>Only applicable to upgrade action. Setting this to False allows skipping features deactivate/activate steps during the upgrade.</xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="featureScope">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Farm" />
+      <xs:enumeration value="WebApplication" />
+      <xs:enumeration value="Site" />
+      <xs:enumeration value="Web" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="guid">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9a-fA-F]){8}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){4}-([0-9a-fA-F]){12}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<commands>
+	<command name="importlistfield"
+		class="Stsadm.Commands.Lists.ImportListField, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+	<command name="exportlistfield"
+		class="Stsadm.Commands.Lists.ExportListField, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+	<command name="updatelistfield"
+		class="Stsadm.Commands.Lists.UpdateListField, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+	<command name="deletelistfield"
+		class="Stsadm.Commands.Lists.DeleteListField, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="addlinktoquicklaunch"
+		class="Stsadm.Commands.Links.AddLinkToQuickLaunch, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="updatelookups"
+		class="Stsadm.Commands.Lists.UpdateLookups, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="exportlistitem"
+	  class="Stsadm.Commands.Lists.ExportListItem, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="importlistitem"
+	  class="Stsadm.Commands.Lists.ImportListItem, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="copylistitem"
+	  class="Stsadm.Commands.Lists.CopyListItem, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="deletelistitem"
+	  class="Stsadm.Commands.Lists.DeleteListItem,Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="removegroups" 
+    class="Stsadm.Commands.Groups.RemoveGroupsCmd, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="restartactiveworkflows"
+	  class="Stsadm.Commands.Workflows.RestartActiveWorkflows, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="updatechoicefield" 
+    class="Stsadm.Commands.Lists.UpdateChoiceField, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="clearlist"
+	  class="Stsadm.Commands.Lists.ClearList, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="setlistcontenttypes"
+	  class="Stsadm.Commands.Lists.SetListContentTypes, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="exportlistsecurity"
+    class="Stsadm.Commands.Lists.ExportListSecurity, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="importlistsecurity"
+  class="Stsadm.Commands.Lists.ImportListSecurity, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="renamegroup"
+  class="Stsadm.Commands.Groups.RenameGroup, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="transferusers"
+  class="Stsadm.Commands.Groups.TransferUsersAcrossGroups, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="deletelist"
+  class="Stsadm.Commands.Lists.DeleteList, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="exportwebsecurity"
+    class="Stsadm.Commands.Webs.ExportWebSecurity, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="importwebsecurity"
+    class="Stsadm.Commands.Webs.ImportWebSecurity, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="importitems"
+    class="Stsadm.Commands.Import.ImportItemCommand, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="updatefieldschema"
+    class="Stsadm.Commands.Lists.UpdateFieldSchema, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="activatefeaturecommand"
+    class="Stsadm.Commands.ActivateFeatureCommand, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+  <command name="removelinkfromquicklaunch"
+    class="Stsadm.Commands.Links.RemoveLinkFromQuickLaunch, Stsadm.Commands, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a97ff9f3cabe3d5d"/>
+</commands>

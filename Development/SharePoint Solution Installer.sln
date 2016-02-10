@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePlex.SharePointInstaller", "Source\CodePlex.SharePointInstaller.csproj", "{825F2C99-8758-4171-B8BC-988C3D2926E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{825F2C99-8758-4171-B8BC-988C3D2926E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825F2C99-8758-4171-B8BC-988C3D2926E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825F2C99-8758-4171-B8BC-988C3D2926E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825F2C99-8758-4171-B8BC-988C3D2926E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Source\\CodePlex.SharePointInstaller.csproj
+		SccProjectName1 = Source
+		SccLocalPath1 = Source
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="abortButtonText" xml:space="preserve">
+    <value>&amp;Close</value>
+  </data>
+  <data name="activateFarmFeatureMessage" xml:space="preserve">
+    <value>Activating {0} farm feature(s).</value>
+  </data>
+  <data name="activateWebAppFeatureMessage" xml:space="preserve">
+    <value>Activating {0} web application feature(s) on {1} web applications.</value>
+  </data>
+  <data name="activateSiteCollectionFeatureMessage" xml:space="preserve">
+    <value>Activating feature(s) on {0} site collection(s).</value>
+  </data>
+  <data name="activateWebFeatureMessage" xml:space="preserve">
+    <value>Activating feature(s) on {0} site(s).</value>
+  </data>
+  <data name="activatingFeaturesMessage" xml:space="preserve">
+    <value>Activating {0} total activations of {1} feature(s) on {2} location(s).</value>
+  </data>
+  <data name="addSolutionAccessError" xml:space="preserve">
+    <value>Access denied! Could not add solution to the SharePoint farm.</value>
+  </data>
+  <data name="addSolutionAccessErrorWinServer2003Solution" xml:space="preserve">
+    <value>Make sure you are logged in as SharePoint Administrator or Domain Administrator on the server.</value>
+  </data>
+  <data name="addSolutionAccessErrorWinServer2008Solution" xml:space="preserve">
+    <value>Make sure you are logged in as SharePoint Administrator or Domain Administrator on the server. Also, make sure to turn off Windows User Account Control.</value>
+  </data>
+  <data name="addSolutionCommand" xml:space="preserve">
+    <value>Adding solution to the SharePoint solution store.</value>
+  </data>
+  <data name="adminRightsCheckErrorText" xml:space="preserve">
+    <value>You do NOT have permission to install and deploy SharePoint solutions!</value>
+  </data>
+  <data name="adminRightsCheckOkText" xml:space="preserve">
+    <value>You have permission to install and deploy SharePoint solutions.</value>
+  </data>
+  <data name="adminRightsCheckQuestionText" xml:space="preserve">
+    <value>Do you have permission to install and deploy SharePoint solutions?</value>
+  </data>
+  <data name="adminServiceCheckErrorText" xml:space="preserve">
+    <value>The Windows SharePoint Services Administration service is NOT started!</value>
+  </data>
+  <data name="adminServiceCheckOkText" xml:space="preserve">
+    <value>The Windows SharePoint Services Administration service is started.</value>
+  </data>
+  <data name="adminServiceCheckQuestionText" xml:space="preserve">
+    <value>Is the Windows SharePoint Services Administration service started?</value>
+  </data>
+  <data name="controlSubTitleActivations" xml:space="preserve">
+    <value>Review currently activated locations if desired</value>
+  </data>
+  <data name="controlSubTitleInstalling" xml:space="preserve">
+    <value>Please wait while the solution is installed</value>
+  </data>
+  <data name="controlSubTitleLicense" xml:space="preserve">
+    <value>Please read the following license agreement carefully</value>
+  </data>
+  <data name="controlSubTitleOptions" xml:space="preserve">
+    <value />
+  </data>
+  <data name="controlSubTitleSelectOperation" xml:space="preserve">
+    <value>Please select the operation you wish to perform</value>
+  </data>
+  <data name="controlSubTitleSiteDeployment" xml:space="preserve">
+    <value>Please select one or more web applications / site collections</value>
+  </data>
+  <data name="controlSubTitleSystemCheck" xml:space="preserve">
+    <value>Checking if {SolutionTitle} can be installed from this machine</value>
+  </data>
+  <data name="controlSubTitleWebApplicationDeployment" xml:space="preserve">
+    <value>Please select one or more web applications</value>
+  </data>
+  <data name="controlSubTitleWelcome" xml:space="preserve">
+    <value>Welcome to the {SolutionTitle} setup wizard</value>
+  </data>
+  <data name="controlTitleActivations" xml:space="preserve">
+    <value>Currently Activated Instances</value>
+  </data>
+  <data name="controlSummaryActivations" xml:space="preserve">
+    <value>Review Currently Activated Locations</value>
+  </data>
+  <data name="controlSummaryCompleted" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="controlSummaryFinished" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="controlSummaryInstalling" xml:space="preserve">
+    <value>Perform Operation</value>
+  </data>
+  <data name="controlSummaryWelcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="controlTitleInstalling" xml:space="preserve">
+    <value>Installing</value>
+  </data>
+  <data name="controlTitleLicense" xml:space="preserve">
+    <value>End-User License Agreement</value>
+  </data>
+  <data name="controlTitleOptions" xml:space="preserve">
+    <value>Installation Options</value>
+  </data>
+  <data name="controlTitleRepairRemove" xml:space="preserve">
+    <value>Repair or Remove</value>
+  </data>
+  <data name="controlTitleSiteDeployment" xml:space="preserve">
+    <value>Site Collection Deployment Targets</value>
+  </data>
+  <data name="controlTitleSystemCheck" xml:space="preserve">
+    <value>System Check</value>
+  </data>
+  <data name="controlTitleUpgradeRemove" xml:space="preserve">
+    <value>Upgrade or Remove</value>
+  </data>
+  <data name="controlTitleWebApplicationDeployment" xml:space="preserve">
+    <value>Web Application Deployment Targets</value>
+  </data>
+  <data name="controlTitleWelcome" xml:space="preserve">
+    <value>{SolutionTitle}</value>
+  </data>
+  <data name="createDeploymentJobCommand" xml:space="preserve">
+    <value>Creating job for deploying the solution to web applications.</value>
+  </data>
+  <data name="WebApplicationDeploymentLogMessage" xml:space="preserve">
+    <value>Deploying to web application(s): {0}.</value>
+  </data>
+  <data name="createRetractionJobCommand" xml:space="preserve">
+    <value>Creating job for retracting the solution from all web applications.</value>
+  </data>
+  <data name="createUpgradeJobCommand" xml:space="preserve">
+    <value>Creating job for upgrading the solution on all applicable web applications.</value>
+  </data>
+  <data name="deactivateFarmFeatureMessage" xml:space="preserve">
+    <value>Deactivating {0} farm feature(s).</value>
+  </data>
+  <data name="deactivateWebAppFeatureMessage" xml:space="preserve">
+    <value>Deactivating {0} web application feature(s) on {1} web applications.</value>
+  </data>
+  <data name="deactivateSiteCollectionFeatureMessage" xml:space="preserve">
+    <value>Deactivating {0} feature(s) on {1} site collection(s).</value>
+  </data>
+  <data name="deactivateWebFeatureMessage" xml:space="preserve">
+    <value>Deactivating {0} feature(s) on {1} site(s).</value>
+  </data>
+  <data name="deactivatingFeaturesMessage" xml:space="preserve">
+    <value>Deactivating {0} total activations of {1} feature(s) on {2} location(s).</value>
+  </data>
+  <data name="ActivatingSkipped_FeatureAlreadyActiveOnFarm" xml:space="preserve">
+    <value>Activation skipped because feature "{0}" already active on farm.</value>
+  </data>
+  <data name="ActivatingSkipped_FeatureAlreadyActiveOnWebApp" xml:space="preserve">
+    <value>Activation skipped because feature "{0}" already active on web application: {1}.</value>
+  </data>
+  <data name="ActivatingSkipped_FeatureAlreadyActiveOnSite" xml:space="preserve">
+    <value>Activation skipped because feature "{0}" already active on site collection: {1}.</value>
+  </data>
+  <data name="ActivatingSkipped_FeatureAlreadyActiveOnWeb" xml:space="preserve">
+    <value>Activation skipped because feature "{0}" already active on web: {1}.</value>
+  </data>
+  <data name="DeactivatingSkipped_FeatureAlreadyDeactiveOnFarm" xml:space="preserve">
+    <value>Deactivation skipped because feature "{0}" already inactive on farm.</value>
+  </data>
+  <data name="DeactivatingSkipped_FeatureAlreadyDeactiveOnWebApp" xml:space="preserve">
+    <value>Deactivation skipped because feature "{0}" already inactive on web application: {1}.</value>
+  </data>
+  <data name="DeactivatingSkipped_FeatureAlreadyDeactiveOnSite" xml:space="preserve">
+    <value>Deactivation skipped because feature "{0}" already inactive on site collection: {1}.</value>
+  </data>
+  <data name="DeactivatingSkipped_FeatureAlreadyDeactiveOnWeb" xml:space="preserve">
+    <value>Deactivation skipped because feature "{0}" already inactive on web: {1}.</value>
+  </data>
+  <data name="descriptionLabelTextErrorsDetected" xml:space="preserve">
+    <value>Errors detected. Rolling back all operations.</value>
+  </data>
+  <data name="descriptionLabelTextOperationCanceled" xml:space="preserve">
+    <value>Operation canceled! Rolling back all operations.</value>
+  </data>
+  <data name="descriptionLabelTextRollbackError" xml:space="preserve">
+    <value>Rollback completed with {0} errors. Please see log file for details.</value>
+  </data>
+  <data name="descriptionLabelTextRollbackSuccess" xml:space="preserve">
+    <value>Rollback successfully completed.</value>
+  </data>
+  <data name="descriptionLabelTextSuccess" xml:space="preserve">
+    <value>All operations successfully completed.</value>
+  </data>
+  <data name="finishedLinkText" xml:space="preserve">
+    <value>For more documentation on how to use {SolutionTitle} click here.</value>
+  </data>
+  <data name="finishedLinkTextSiteCollection" xml:space="preserve">
+    <value>Click here to configure {SolutionTitle} for {0}.</value>
+  </data>
+  <data name="finishedLinkTextSsp" xml:space="preserve">
+    <value>Click here to configure {SolutionTitle} for {0}.</value>
+  </data>
+  <data name="finishedSubTitle" xml:space="preserve">
+    <value>Finished installing {SolutionTitle}</value>
+  </data>
+  <data name="finishedTitle" xml:space="preserve">
+    <value>Finished</value>
+  </data>
+  <data name="installError" xml:space="preserve">
+    <value>Installation Failed</value>
+  </data>
+  <data name="installExceptionAccessDenied" xml:space="preserve">
+    <value>Access denied. Could not read the Windows Registry key '{0}'</value>
+  </data>
+  <data name="installExceptionConfigurationInvalidId" xml:space="preserve">
+    <value>Configuration error! Invalid Solution id.</value>
+  </data>
+  <data name="installExceptionConfigurationNoId" xml:space="preserve">
+    <value>Configuration error! Missing Solution id.</value>
+  </data>
+  <data name="installExceptionConfigurationNoWsp" xml:space="preserve">
+    <value>Configuration error! No Solution file was specified in setup.exe.config</value>
+  </data>
+  <data name="installExceptionDatabase" xml:space="preserve">
+    <value>SharePoint was unable to connect to the database.</value>
+  </data>
+  <data name="installExceptionDuplicateJob" xml:space="preserve">
+    <value>Another deployment job for this solution is currently running.</value>
+  </data>
+  <data name="installExceptionFileNotFound" xml:space="preserve">
+    <value>Could not find the specified solution file '{0}'</value>
+  </data>
+  <data name="installExceptionTimeout" xml:space="preserve">
+    <value>Timeout error</value>
+  </data>
+  <data name="installSubTitle" xml:space="preserve">
+    <value>Please wait while {SolutionTitle} is installed</value>
+  </data>
+  <data name="installSuccess" xml:space="preserve">
+    <value>Installation Successfully Completed</value>
+  </data>
+  <data name="installTitle" xml:space="preserve">
+    <value>Installing</value>
+  </data>
+  <data name="linkLabelDialogText" xml:space="preserve">
+    <value>Unable to process [{0}].</value>
+  </data>
+  <data name="logError" xml:space="preserve">
+    <value>***** ERROR *****</value>
+  </data>
+  <data name="logFeatureActivate" xml:space="preserve">
+    <value>***** FEATURE ACTIVATION *****</value>
+  </data>
+  <data name="logFeatureDeactivate" xml:space="preserve">
+    <value>***** FEATURE DEACTIVATION *****</value>
+  </data>
+  <data name="logNoFeaturesSpecified" xml:space="preserve">
+    <value>No features specified.</value>
+  </data>
+  <data name="logNoLocationsForActivationDeactivation" xml:space="preserve">
+    <value>No locations for activation/deactivation.</value>
+  </data>
+  <data name="logNoSiteCollectionsFeatured" xml:space="preserve">
+    <value>No site collections have feature activated.</value>
+  </data>
+  <data name="logNoSiteCollectionsSpecified" xml:space="preserve">
+    <value>No site collections specified.</value>
+  </data>
+  <data name="logNoWebsFeatured" xml:space="preserve">
+    <value>No sites have feature activated.</value>
+  </data>
+  <data name="logRetract" xml:space="preserve">
+    <value>***** SOLUTION RETRACTION *****</value>
+  </data>
+  <data name="logUpgrade" xml:space="preserve">
+    <value>***** SOLUTION UPGRADE *****</value>
+  </data>
+  <data name="messageLabelTextError" xml:space="preserve">
+    <value>Error! Please correct the above errors before installing {SolutionTitle}.</value>
+  </data>
+  <data name="messageLabelTextSuccess" xml:space="preserve">
+    <value>All checks succeeded. Please click Next to proceed with the installation.</value>
+  </data>
+  <data name="mossCheckErrorText" xml:space="preserve">
+    <value>SharePoint Server is NOT installed!</value>
+  </data>
+  <data name="mossCheckOkText" xml:space="preserve">
+    <value>SharePoint Server is installed.</value>
+  </data>
+  <data name="mossCheckQuestionText" xml:space="preserve">
+    <value>Is SharePoint Server installed?</value>
+  </data>
+  <data name="registerVersionNumberCommand" xml:space="preserve">
+    <value>Registering version number.</value>
+  </data>
+  <data name="removeSolutionCommand" xml:space="preserve">
+    <value>Removing solution from the SharePoint solution store.</value>
+  </data>
+  <data name="repairError" xml:space="preserve">
+    <value>Repair Failed</value>
+  </data>
+  <data name="repairSubTitle" xml:space="preserve">
+    <value>Please wait while {SolutionTitle} is repaired</value>
+  </data>
+  <data name="repairSuccess" xml:space="preserve">
+    <value>Repair Successfully Completed</value>
+  </data>
+  <data name="repairTitle" xml:space="preserve">
+    <value>Repairing</value>
+  </data>
+  <data name="rootWebTitleAccessDenied" xml:space="preserve">
+    <value>&lt;cannot access root web - access denied&gt;</value>
+  </data>
+  <data name="siteCollectionAccessError" xml:space="preserve">
+    <value>Access error on site collection {0}.</value>
+  </data>
+  <data name="skippingSiteSelectionNoFeature" xml:space="preserve">
+    <value>Skipping Site Selection because no featureid specified.</value>
+  </data>
+  <data name="solutionCheckErrorText" xml:space="preserve">
+    <value>Error detecting {SolutionTitle}!</value>
+  </data>
+  <data name="solutionCheckOkText" xml:space="preserve">
+    <value>{SolutionTitle} not installed</value>
+  </data>
+  <data name="solutionCheckOkTextInstalled" xml:space="preserve">
+    <value>{SolutionTitle} is already installed.</value>
+  </data>
+  <data name="solutionCheckOkTextNotInstalled" xml:space="preserve">
+    <value>{SolutionTitle} is not installed.</value>
+  </data>
+  <data name="solutionCheckQuestionText" xml:space="preserve">
+    <value>Detecting {SolutionTitle}</value>
+  </data>
+  <data name="featuresCheckQuestionText" xml:space="preserve">
+    <value>Checking features as specified in config</value>
+  </data>
+  <data name="featuresNewText" xml:space="preserve">
+    <value>New features specified: {0}</value>
+  </data>
+  <data name="featuresInstalledText" xml:space="preserve">
+    <value>Installed features specified: {0}</value>
+  </data>
+  <data name="featuresMixedText" xml:space="preserve">
+    <value>Specified features, total={0}, new={1}, installed={2}, other soln={3}, no soln={4}</value>
+  </data>
+  <data name="solutionFileCheckOkText" xml:space="preserve">
+    <value>Solution file found.</value>
+  </data>
+  <data name="solutionFileCheckQuestionText" xml:space="preserve">
+    <value>Does the solution file exist?</value>
+  </data>
+  <data name="timerServiceCheckErrorText" xml:space="preserve">
+    <value>The Windows SharePoint Services Timer service is NOT started!</value>
+  </data>
+  <data name="timerServiceCheckOkText" xml:space="preserve">
+    <value>The Windows SharePoint Services Timer service is started.</value>
+  </data>
+  <data name="timerServiceCheckQuestionText" xml:space="preserve">
+    <value>Is the Windows SharePoint Services Timer service started?</value>
+  </data>
+  <data name="uninstallError" xml:space="preserve">
+    <value>Uninstall Failed</value>
+  </data>
+  <data name="uninstallSubTitle" xml:space="preserve">
+    <value>Please wait while {SolutionTitle} is removed</value>
+  </data>
+  <data name="uninstallSuccess" xml:space="preserve">
+    <value>Uninstall Successfully Completed</value>
+  </data>
+  <data name="uninstallTitle" xml:space="preserve">
+    <value>Uninstalling</value>
+  </data>
+  <data name="unregisterVersionNumberCommand" xml:space="preserve">
+    <value>Unregistering version number.</value>
+  </data>
+  <data name="upgradeError" xml:space="preserve">
+    <value>Upgrade Failed</value>
+  </data>
+  <data name="upgradeSubTitle" xml:space="preserve">
+    <value>Please wait while {SolutionTitle} is upgraded</value>
+  </data>
+  <data name="upgradeSuccess" xml:space="preserve">
+    <value>Upgrade Successfully Completed</value>
+  </data>
+  <data name="upgradeTitle" xml:space="preserve">
+    <value>Upgrading</value>
+  </data>
+  <data name="waitForSolutionDeployment" xml:space="preserve">
+    <value>Waiting for solution deployment job to complete. Press Abort to stop.</value>
+  </data>
+  <data name="waitForSolutionRetraction" xml:space="preserve">
+    <value>Waiting for solution retraction job to complete. Press Abort to stop.</value>
+  </data>
+  <data name="waitForSolutionUpgrade" xml:space="preserve">
+    <value>Waiting for solution upgrade job to complete. Press Abort to stop.</value>
+  </data>
+  <data name="wssCheckErrorText" xml:space="preserve">
+    <value>SharePoint Foundation/Services is NOT installed!</value>
+  </data>
+  <data name="wssCheckOkText" xml:space="preserve">
+    <value>SharePoint Foundation/Services is installed.</value>
+  </data>
+  <data name="wssCheckQuestionText" xml:space="preserve">
+    <value>Is SharePoint Foundation/Services installed?</value>
+  </data>
+  <data name="versionCheckQuestionText" xml:space="preserve">
+    <value>SharePoint version between '{0}' and '{1}'?</value>
+  </data>
+  <data name="versionCheckOkText" xml:space="preserve">
+    <value>SharePoint version compatible: {0}.</value>
+  </data>
+  <data name="versionCheckErrorText" xml:space="preserve">
+    <value>SharePoint version NOT compatible: {0}!</value>
+  </data>
+</root>

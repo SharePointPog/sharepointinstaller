@@ -1,0 +1,53 @@
+SharePoint Solution Installer Development V1 ChangeLog
+
+2013-02-20, Perry
+ Implement new config options MinSharePointVersion & MaxSharePointVersion
+   New class SharePointVersionCheck in SystemCheckControl
+ Test for WSS installation by instatiating SPFarm.Local, to get away from hive number dependency
+ New class spver.cs
+ Change WSS3 to SharePoint Foundation/Services
+   (wssCheckErrorText, wssCheckOkText, wssCheckQuestionText)
+   and MOSS 2007 to SharePoint Server
+   (mossCheckErrorText, mossCheckOkText, mossCheckQuestionText)
+   to get away from WSS3/MOSS2007 specificity
+
+2013-02-21, Perry
+ Remove unneeded reference to Microsoft.SharePoint.Search
+ Modify AdminServiceCheck to work for SP2010 & SP2013; new method GetSPAdminServiceName
+ Modify TimerServiceCheck to work for SP2010 & SP2013; new method GetSPTimerServiceName
+ Add product name & version to lower left
+ Add VS2012 solution & converted csproj, using .NET 4, to target SharePoint 2013
+   SharePoint Solution Installer 2013.sln & CodePlex.SharePointInstaller 2013.csproj
+ Modify application title to include SP2007 or SP2013, depending on csproj used
+ Release 1.2.6.0
+
+2013-02-22, Perry
+ Bump AssemblyFileVersion to 1.2.6.1
+ V1: Fix welcome string from "SharePoint 2007 farm" to "SharePoint farm"
+
+2013-03-20, Perry
+ New ActivationCommand method ActivateOneFeature
+  which handles compatibility option when activating features on SP2013
+
+2013-07-12, Perry
+ NB: API call in ActivateOneFeature still doesn't work for 15
+ Fix FeatureActivator.ActivateOneFeature to take log param
+ InstallProcessControl.LogMessageToString: Include inner exceptions in log
+ LogManager.Error: fix to not drop exception
+ Deploy solutions with 14/15 compatibility if specified: new CompatibilityDeployer.cs
+ Fix compilation on SP2007
+ Implement all string CompatibilityLevels currently documented for Install-SPSolution
+  (add AllVersions, Old, OldVersion, New, and NewVersion)
+ Release 1.2.8.0
+
+2015-09-08, Perry
+ Fix InstallConfiguration.FeatureId to return empty list instead of null
+  when no features specified
+ Release 1.2.10.0
+
+2016-02-03, Perry Rapp
+ Improve getting web application list; protected access to Solution.DeployedWebApplications
+  and improve reporting when falling back to enumerating all webapps
+
+2016-02-04, Perry Rapp
+ Release 1.2.12.0

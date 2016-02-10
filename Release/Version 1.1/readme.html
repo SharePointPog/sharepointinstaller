@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>SharePoint Solution Installer</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<style type="text/css">
+h3 { margin-top:35px }
+h5 { margin:0 }
+td {font-size:x-small; }
+</style>
+</HEAD>
+<BODY style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:x-small">
+<H1><I>SharePoint Solution Installer</I></H1>
+
+<H3>Quick Information</H3>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Product Name:</TD>
+    <TD width="71%" height=10>SharePoint Solution Installer</TD></TR>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Version:</TD>
+    <TD width="71%" height=10>1.1</TD></TR>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Release date:</TD>
+    <TD width="71%" height=10>September 12<sup>th</sup> 2007</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">System requirements:</TD>
+    <TD width="71%">.NET 2.0+, Windows SharePoint Services 3.0</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Language:</TD>
+    <TD width="71%">English</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">License:</TD>
+    <TD width="71%">Microsoft Permissive</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Author:</TD>
+    <TD width="71%">Lars Fastrup Nielsen, Mondosoft, <A href="mailto:lfn@mondosoft.com">lfn@mondosoft.com</A></TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Homepage:</TD>
+    <TD width="71%"><A href="http://www.codeplex.com/sharepointinstaller">http://www.codeplex.com/sharepointinstaller</A></TD></TR>
+</TBODY></TABLE>
+<H3>Installation</H3>
+<BLOCKQUOTE>
+  <P>To install SharePoint Solution Installer, just unzip and you are ready to run setup.exe.</P></BLOCKQUOTE>
+<H3>Description</H3>
+<BLOCKQUOTE>
+  <P>A free tool for eased installation and deployment of SharePoint 2007 solution files to a SharePoint server farm.</P></BLOCKQUOTE>
+<H3>Disclaimer</H3>
+<BLOCKQUOTE>
+  <P>This software is 
+  provided as is without warranty of an kind, either kind, either expressed or 
+  implied. The entire risk as to the quality and performance of the software is 
+  with you. Should the software prove defective, you assume the cost of all 
+  necessary servicing, repair, or correction. In no event shall the author, 
+  copyright holder, or any other party who may redistribute the software be 
+  liable to you for damages, including any general, special, incidental, or 
+  consequential damages arising out of the use or inability to use the software 
+  (including, but not limited to, loss of data, data being rendered inaccurate, 
+  loss of business profits, loss of business information, business 
+  interruptions, loss sustained by you or third parties, or a failure of the 
+  software to operate with any other software) even if the author, copyright 
+  holder, or other party has been advised of the possibility of such 
+  damages.</P></BLOCKQUOTE>
+<H3>Features</H3>
+<ul>
+<li><strong>Support for all relevant operations:</strong>
+<ul>
+<li>Add solution to the SharePoint solution store.</li>
+<li>Deploy solution to one or more web applications.</li>
+<li>Upgrade solution.</li>
+<li>Retract and remove solution.</li>
+</ul>
+</li>
+<li><strong>Pre-install system check for the following conditions:</strong>
+<ul>
+<li>WSS V3 is installed.</li>
+<li>MOSS 2007 is installed (This check can be disabled in config file)</li>
+<li>User has permission to install solutions.</li>
+<li>SharePoint database is online.</li>
+<li>WSS Administration service is started.</li>
+<li>WSS Timer service is started.</li>
+</ul>
+</li>
+<li><strong>Implements a work around for the following error conditions:</strong>
+<ul>
+<li>Another solution deployment job never finished and is now blocking for the creation of a new job. Work-around: Delete old job from the list of Timer job defnitions.</li>
+<li>Timer service is not started: An attempt is made to start it (please note that timer services on other front ends will not be started).</li>
+<li>Database is offline, which will yield an ugly NullreferenceException from SharePoint offering little clue to the root cause of the problem. Work around: Detect NullreferenceException and display nice error message.</li>
+</ul>
+</li>
+<li><strong>Display EULA. (Can be disabled in config file).</strong></li>
+<li><strong>Web application list where user can select the web apps. to deploy the solution to.</strong></li>
+<li><strong>Rollback after installation errors.</strong></li>
+<li><strong>Configurable Product Title.</strong></li>
+<li><strong>Configurable banner image.</strong></li>
+<li><strong>Configurable logo image.</strong></li>
+</ul>
+<h3>Configuration File</h3>  
+<blockquote>
+<p>The installer can be launched with <strong>setup.exe</strong>, which can in turn be configured via the <strong>setup.exe.config</strong> file. The following configuration example outlines the various options that can be configured:</p>
+<p><font face="Courier New"><font size="2"><font color="#0000ff">&lt;</font><font color="#800000">configuration</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;<br />
+    &nbsp;
+  &lt;</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;<br />
+      &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">BannerImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">LogoImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA.rtf</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">Require</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">MOSS</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff">
+    </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">FarmFeatureId</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">A69D3FDA-142A-4d2c-BA6D-446CE01FF1C2</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">SolutionId</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">44906C46-D7C1-4a14-A7D2-87394D9FC7E3</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">SolutionFile</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">yoursolution</font><font color="#0000ff">.wsp</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">SolutionTitle</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Enter Product Title Here</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">SolutionVersion</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">1</font><font color="#0000ff">.0.0.0</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">UpgradeDescription</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Upgrades {SolutionTitle} on all frontend web servers in the SharePoint farm. </font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToCentralAdminWebApllication</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">true</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &nbsp;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToAllContentWebApplications</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">false</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;<br />
+        &nbsp; &lt;/</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;<br />
+&lt;/</font><font color="#800000">configuration</font><font color="#0000ff">&gt;</font></font></font></p>
+<h5>BannerImage</h5>
+<p style="margin-top:0">Accepts a path to your own banner image. The image is automatically stretched to fir the title bar. Remove or specify empty value to omit banner image.</p>
+<h5>LogoImage</h5>
+<p style="margin-top:0">Accepts a path to your own logo image. Remove or specify empty value to omit banner image.</p>
+<h5>EULA</h5>
+<p style="margin-top:0">Accepts a path to your own EULA file. Remove or specify empty value if you do not want to present an EULA to the user.</p>
+<h5>Require</h5>
+<p style="margin-top:0">Specify MOSS if your solution requires Microsoft Office SharePoint Server 2007 to install and run. Remove or specify empty value if your solution will settle for a WSS only farm.</p>
+<h5>FarmFeatureId</h5>
+<p style="margin-top:0">Specify the GUID of the farm level feature that the installer should automatically activate at the end of the installation process. Specify empty value if the installer should not activate any feature.</p>
+<h5>SolutionId</h5>
+<p style="margin-top:0">Specify the GUID of your solution. The installer will need this to detect any existing solution in the SharePoint solution store.</p>
+<h5>SolutionFile</h5>
+<p style="margin-top:0">Specify the filename of the solution file, e.g. mysolution.wsp. Creating the solution file is of course your job entirely - but I can highly recommend you to take a look at the Visual Studio 2005 Extensions for WSS 3.0</p>
+<h5>SolutionVersion</h5>
+<p style="margin-top:0">Specify the version of your solution. The upgrade option will only show if this version number is different from the previously installed solution.</p>
+</blockquote>
+
+<H3>History</H3>
+<BLOCKQUOTE>
+  <P><strong>V1.1 - 2007-09-12</strong></P>
+  <UL>
+    <li>Moved to CodePlex</li>
+  </UL>
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+  <P><strong>V1.0.3 - 2007-03-25</strong></P>
+  <UL>
+    <LI>Implemented work-around for daylight saving time (DST) bug in the SharePoint 2007 timer service, which meant that the solution deplyment and solution retraction jobs would not run until one hour after the jobs were created. The work-around is basically to tell SharePoint to run the job yesterday. This will immediately kick start the timer job no matter the time zone and DST settings. Microsoft is aware of the bug and has created a knowledgebase articlew for it here: <a href="http://support.microsoft.com/kb/932563">http://support.microsoft.com/kb/932563</a></LI> 
+    <LI>Upgrade and Repair radio buttons are now selected by default.</LI> 
+</UL>
+  <P><strong>V1.0.2 - 2007-03-15</strong></P>
+  <UL>
+    <LI>Fixed bug where the repair operation failed with the error 'GUID should contain 32 digits with 4 dashes'.</LI> 
+    <li>Support for upgrading renamed solution files. A renamed solution file will now trigger the upgrade operation to do a full reinstall of the solution.</li>
+</UL>
+  <P><strong>V1.0.1 - 2007-03-15</strong></P>
+  <UL>
+    <LI>Fixed bug where the installer failed to launch when WSS 3.0 was not installed (WSS is required to install the solution in the end. But the installer must also be able to launch and tell the user that WSS is not installed).</LI>    
+</UL>
+  <P><strong>V1.0.0 - 2007-03-14</strong></P>
+  <ul>
+    <li>First release.</li>
+  </ul>
+</BLOCKQUOTE>
+</BODY></HTML>

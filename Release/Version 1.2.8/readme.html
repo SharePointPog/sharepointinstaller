@@ -1,0 +1,300 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>SharePoint Solution Installer</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<style type="text/css">
+h3 { margin-top:35px }
+h5 { margin:0 }
+td {font-size:x-small; }
+</style>
+</HEAD>
+<BODY style="font-family:Verdana, Arial, Helvetica, sans-serif;font-size:x-small">
+<H1><I>SharePoint Solution Installer</I></H1>
+
+<h3>Quick Information</h3>
+<TABLE width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Product Name:</TD>
+    <TD width="71%" height=10>SharePoint Solution Installer</TD></TR>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Version:</TD>
+    <TD width="71%" height=10>1.2.8</TD></TR>
+  <TR>
+    <TD width="4%" height=10>&nbsp;</TD>
+    <TD width="25%" height=10>Release date:</TD>
+    <TD width="71%" height=10>July 12<sup>th</sup> 2013</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">System requirements:</TD>
+    <TD width="71%">Windows SharePoint Services or SharePoint Foundation</TD></TR>
+  <TR>
+    <TD width="4%" style="height: 18px">&nbsp;</TD>
+    <TD width="25%" style="height: 18px">Language:</TD>
+    <TD width="71%" style="height: 18px">English</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">License:</TD>
+    <TD width="71%">Microsoft Permissive</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Project Owner:</TD>
+    <TD width="71%">Lars Fastrup, <A href="mailto:lars@sharepointproducts.com">lars@sharepointproducts.com</A></TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Contributor:</TD>
+    <TD width="71%">Kirk Liemohn, <A href="mailto:kliemohn@threewill.com">kliemohn@threewill.com</A></TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Contributor:</TD>
+    <TD width="71%">Mikhail Dikov, <A href="mailto:Mikhail.Dikov@global360.com">Mikhail.Dikov@global360.com</A></TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Contributor:</TD>
+    <TD width="71%">Perry Rapp</TD></TR>
+  <TR>
+    <TD width="4%">&nbsp;</TD>
+    <TD width="25%">Homepage:</TD>
+    <TD width="71%"><A href="http://www.codeplex.com/sharepointinstaller">http://www.codeplex.com/sharepointinstaller</A></TD></TR>
+</TBODY></TABLE>
+<h3>Installation</h3>
+<blockquote>
+  <P>To install SharePoint Solution Installer, just unzip and you are ready to run. Use setup.exe for SP2007 and SP2010. Use setup2013.exe for SP2013.</P></blockquote>
+<h3>Description</h3>
+<blockquote>
+  <P>A free tool for eased installation and deployment of SharePoint solution files to a SharePoint server farm.</P></blockquote>
+<h3>Disclaimer</h3>
+<blockquote>
+  <P>This software is 
+  provided as is without warranty of an kind, either kind, either expressed or 
+  implied. The entire risk as to the quality and performance of the software is 
+  with you. Should the software prove defective, you assume the cost of all 
+  necessary servicing, repair, or correction. In no event shall the author, 
+  copyright holder, or any other party who may redistribute the software be 
+  liable to you for damages, including any general, special, incidental, or 
+  consequential damages arising out of the use or inability to use the software 
+  (including, but not limited to, loss of data, data being rendered inaccurate, 
+  loss of business profits, loss of business information, business 
+  interruptions, loss sustained by you or third parties, or a failure of the 
+  software to operate with any other software) even if the author, copyright 
+  holder, or other party has been advised of the possibility of such 
+  damages.</P></blockquote>
+<h3>Features</h3>
+<ul>
+<li><strong>Support for all relevant operations:</strong>
+<ul>
+<li>Add solution to the SharePoint solution store.</li>
+<li>Deploy solution to one or more web applications.</li>
+    <li>Activate feature on one or more site collections for features scoped to a Site (site
+        collection).&nbsp;</li>
+<li>Upgrade solution.</li>
+<li>Retract and remove solution.</li>
+</ul>
+</li>
+<li><strong>Pre-install system check for the following conditions:</strong>
+<ul>
+<li>WSS or SPF is installed.</li>
+<li>SharePoint Server is installed (This check can be disabled in config file)</li>
+<li>User has permission to install solutions.</li>
+<li>SharePoint database is online.</li>
+<li>WSS Administration service is started.</li>
+<li>WSS Timer service is started.</li>
+</ul>
+</li>
+<li><strong>Implements a work around for the following error conditions:</strong>
+<ul>
+<li>Another solution deployment job never finished and is now blocking for the creation of a new job. Work-around: Delete old job from the list of Timer job defnitions.</li>
+<li>Timer service is not started: An attempt is made to start it (please note that timer services on other front ends will not be started).</li>
+<li>Database is offline, which will yield an ugly NullreferenceException from SharePoint offering little clue to the root cause of the problem. Work around: Detect NullreferenceException and display nice error message.</li>
+</ul>
+</li>
+<li><strong>Display EULA. (Can be disabled in config file).</strong></li>
+<li><strong>Web application list where user can select the web apps. to deploy the solution to.</strong></li>
+<li><strong>Rollback after installation errors.</strong></li>
+<li><strong>Configurable Product Title.</strong></li>
+<li><strong>Configurable banner image.</strong></li>
+<li><strong>Configurable logo image.</strong></li>
+<li><strong>Supports optionally displaying a documentation/help link at the end of the installation.</strong></li>
+<li><strong>Supports optionally displaying a reletive configuration link within deployed location for each deployment target.</strong></li>
+<li><strong>Supports a single feature inside a single WSP.</strong>
+<ul>
+<li>(Multiple features are partially supported. Multiple WSPs are not supported.)</li>
+</ul>
+</li>
+<li><strong>Support for features scoped to:</strong><ul>
+    <li>Farm</li>
+    <li>Web Application</li>
+    <li>Site (site collection)</li>
+    <li>(Web (site)</li>
+</ul>
+</li>
+</ul>
+<h3>Configuration File Example for a Farm-Level Feature</h3>  
+<blockquote>
+<p>The installer can be launched with <strong>setup.exe</strong>, which can in turn be configured via the <strong>setup.exe.config</strong> file. The following configuration example outlines the various options that can be configured:</p>
+<pre>
+<font face="Courier New"><font size="2">
+<font color="#0000ff">&lt;</font><font color="#800000">configuration</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+  &lt;</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">BannerImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">LogoImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA.rtf</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionId</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">44906C46-D7C1-4a14-A7D2-87394D9FC7E3</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionFile</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">yoursolution</font><font color="#0000ff">.wsp</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionTitle</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">Enter Product Title Here</font><span style="color: #000000">"</span></font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionVersion</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">1</font><font color="#0000ff">.0.0.0</font><span style="color: #000000">"</span></font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">FeatureScope</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">Farm</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">FeatureId</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">A69D3FDA-142A-4d2c-BA6D-446CE01FF1C2</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font></font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">UpgradeDescription</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Upgrades {SolutionTitle} on all frontend web servers in the SharePoint farm. </font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToCentralAdminWebApplication</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">true</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToAllContentWebApplications</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">false</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">DefaultDeployToSRP</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">false</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">DefaultDeployToAdminWebApplications</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">false</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">DefaultDeployToContentWebApplications</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">false</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">RequireMOSS</font><span style="color: #000000">"</span><font color="#0000ff"></font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">true</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff"></font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SSPRelativeConfigLink</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">/_layouts/MyFeature/Config.aspx</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff"></font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">DocumentationUrl</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">http://www.mycompany.com/MyFeatureDoc.aspx</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff"></font></font></font>
+  &lt;/</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+&lt;/</font><font color="#800000">configuration</font><font color="#0000ff">&gt;</font></font></font></pre>
+</blockquote>
+<h3>Configuration File Example for a Site-Level Feature</h3>  
+<blockquote>
+<p>The installer can be launched with <strong>setup.exe</strong>, which can in turn be configured via the <strong>setup.exe.config</strong> file. The following configuration example outlines the various options that can be configured:</p>
+<pre><font face="Courier New"><font size="2"><font color="#0000ff">&lt;</font><font color="#800000">configuration</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+  &lt;</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">BannerImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">LogoImage</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Default</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">EULA.rtf</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionId</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">44906C46-D7C1-4a14-A7D2-87394D9FC7E3</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionFile</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">yoursolution</font><font color="#0000ff">.wsp</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionTitle</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">Enter Product Title Here</font><span style="color: #000000">"</span></font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SolutionVersion</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">1</font><font color="#0000ff">.0.0.0</font><span style="color: #000000">"</span></font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">FeatureScope</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">Site</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">FeatureId</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">A69D3FDA-142A-4d2c-BA6D-446CE01FF1C2</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font></font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">UpgradeDescription</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">Upgrades {SolutionTitle} on all frontend web servers in the SharePoint farm. </font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToCentralAdminWebApplication</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">false</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;</font><font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font>"<font color="#0000ff">RequireDeploymentToAllContentWebApplications</font>"<font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font>"<font color="#0000ff">false</font>"</font></font><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">SiteCollectionRelativeConfigLink</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">/_layouts/MyFeature/Config.aspx</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff"></font></font></font>
+    &lt;<font color="#800000">add</font><font color="#0000ff"> </font><font color="#ff0000">key</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">DocumentationUrl</font><span style="color: #000000">"</span><font color="#0000ff"> </font><font color="#ff0000">value</font><font color="#0000ff">=</font><span style="color: #000000">"</span><font color="#0000ff">http://www.mycompany.com/MyFeatureDoc.aspx</font><span style="color: #000000">"</span><font face="Courier New"><font size="2"><font color="#0000ff">/&gt;</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff"></font></font></font>
+  &lt;/</font><font color="#800000">appSettings</font></font></font><font face="Courier New"><font size="2"><font color="#0000ff">&gt;
+&lt;/</font><font color="#800000">configuration</font><font color="#0000ff">&gt;</font></font></font></pre>
+</blockquote>
+<h3>Configuration File Settings</h3>  
+<blockquote>
+<h5>BannerImage</h5>
+<p style="margin-top:0">Accepts a path to your own banner image. The image is automatically stretched to fir the title bar. Remove or specify empty value to omit banner image.</p>
+<h5>LogoImage</h5>
+<p style="margin-top:0">Accepts a path to your own logo image. Remove or specify empty value to omit banner image.</p>
+<h5>EULA</h5>
+<p style="margin-top:0">Accepts a path to your own EULA file. Remove or specify empty value if you do not want to present an EULA to the user.</p>
+<h5>SolutionId</h5>
+<p style="margin-top:0">Specify the GUID of your solution. The installer will need this to detect any existing solution in the SharePoint solution store.</p>
+<h5>SolutionFile</h5>
+<p style="margin-top:0">Specify the filename of the solution file, e.g. mysolution.wsp. Creating the solution file is of course your job entirely - but I can highly recommend you to take a look at the Visual Studio 2005 Extensions for WSS 3.0</p>
+<h5>SolutionTitle</h5>
+<p style="margin-top:0">The title of your solution. This is displayed on various screens within the installer.</p>
+<h5>SolutionVersion</h5>
+<p style="margin-top:0">Specify the version of your solution. The upgrade option will only show if this version number is different from the previously installed solution.</p>
+<h5>FeatureScope</h5>
+<p style="margin-top:0">Set to "Farm" if the feature in your WSP is scoped to the farm. Set to "Site" if your feature is scoped to a site collection. This value should be identical to the Scope value specified within your feature XML file within your WSP. Features scoped to the WebApplication or Web are not currently supported. The installer only supports installing a single feature within your WSP.</p>
+<h5>FeatureId</h5>
+<p style="margin-top:0">Specify the semicolon delimited list of GUIDs of the features as indicated in the feature XML files within your WSP. The installer will automatically activate these
+    features at the end of the installation process. Specify empty value if the installer should not activate any feature.</p>
+<h5>UpgradeDescription</h5>
+<p style="margin-top:0">Text to display during an upgrade.</p>
+<h5>RequireDeploymentToCentralAdminWebApplication</h5>
+<p style="margin-top:0">Set to true if you want to force deployment of your solution to all central administration web applications.</p>
+<h5>RequireDeploymentToAllContentWebApplications</h5>
+<p style="margin-top:0">Set to true if you want to force deployment of your solution to all content web applications.</p>
+<h5>DefaultDeployToSRP</h5>
+<p style="margin-top:0">Set to true if you want the user deployment to default to all Shared Resource Providers (e.g., SSP, My Sites). The user can change this default in the deployment screen.</p>
+<h5>DefaultDeployToAdminWebApplications</h5>
+<p style="margin-top:0">Set to true if you want the user deployment to default to all Admin Web Applications (Central Admin). The user can change this default in the deployment screen.</p>
+<h5>DefaultDeployToContentWebApplications</h5>
+<p style="margin-top:0">Set to true if you want the user deployment to default to all Content Web Applications. The user can change this default in the deployment screen.</p>
+<h5>RequireMoss</h5>
+<p style="margin-top:0">Set to true if your solution requires Microsoft (Office) SharePoint Server to install and run. Leave out or set to false if your solution will settle for a WSS only farm.</p>
+<h5>MinSharePointVersion</h5>
+<p style="margin-top:0">Set to minimum version if your solution requires such, e.g., 12.0.0.6421 for WSS3SP2. Leave empty if no such requirement.</p>
+<h5>MaxSharePointVersion</h5>
+<p style="margin-top:0">Set to maximum compatible version of SharePoint if your solution has such a limit, e.g, 12.99.99.99 to be incompatible with SharePoint 2010 or 2013. Leave empty if no such requirement.</p>
+<h5>SSPRelativeConfigLink</h5>
+<p style="margin-top:0">Optionally provide a relative link to a configuration page for your feature that is accessible after your farm feature is activated. This link should be relative to the site where your feature is available (e.g., the SSP URL). This applies only to features scoped to the Farm.</p>
+<h5>SiteCollectionRelativeConfigLink</h5>
+<p style="margin-top:0">Optionally provide a relative link to a configuration page for your feature that is accessible after your Site (site collection) feature is activated. This link should be relative to any site collection where your feature is available. This applies only to features scoped to the Site (site collection).</p>
+<h5>DocumentationURL</h5>
+<p style="margin-top:0">Optionally provide a complete link to where documentation is available for your feature. This is displayed at the end of installation.</p>
+<h5>CompatibilityLevel</h5>
+<p style="margin-top:0">If it is desired to target specific hives on SharePoint 2013, as used in SP-InstallSolution</p>
+</blockquote>
+<h3>History</h3>
+<blockquote>
+  <P><strong>V1.2.8 - 2013-07-12</strong></P>
+  <ul>
+    <li>setup2013.exe now supports CompatibilityLevel to target specific hive</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <P><strong>V1.2.6 - 2013-02-21</strong></P>
+  <ul>
+    <li>setup.exe now supports SharePoint 2010 (as well as SharePoint 2007).</li>
+    <li>New setup2013.exe supporting SharePoint 2013</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <P><strong>V1.2.4 - 2013-02-13</strong></P>
+  <ul>
+    <li>Can handle web application and web feature scopes.</li>
+    <li>Can handle multiple features in the FeatureId configuration string, even if they are of different scopes.</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <P><strong>V1.2.2 - 2009-06-21</strong></P>
+  <ul>
+    <li>Removed automatic restart of the SharePoint Timer Service during the system pre-check.</li>
+    <li>Added descriptive message for the situation where the solution fails to install on a SharePoint Server with Windows Server 2008. The user is basically hinted to turn off Windows User Account Control, which when turned on seems to trigger a SecurityException from the SPSolutionCollection.Add method.</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <P><strong>V1.2.1 - 2009-03-29</strong></P>
+  <ul>
+    <li>Fixed bug <em>This solution contains resources scoped for a Web application.</em></li>
+    <li>Prepared application for localization.</li>
+  </ul>
+</blockquote>
+<blockquote>
+  <P><strong>V1.2 - 2008-06-15</strong></P>
+  <UL>
+    <LI>Added capability to deploy, install, and activate features scoped to a Site (site collection).</LI>
+    <LI>Added documentation URL link capability as well as site collection / SSP relative configuration link capability.</LI>
+    <li>Removed Visual Studio source control bindings in downloadable source code.</li>
+  </UL>
+</blockquote>
+<blockquote>
+  <P><strong>V1.1 - 2007-09-12</strong></P>
+  <UL>
+    <li>Moved to CodePlex</li>
+  </UL>
+</blockquote>
+<blockquote>
+  <P><strong>V1.0.3 - 2007-03-25</strong></P>
+  <UL>
+    <LI>Implemented work-around for daylight saving time (DST) bug in the SharePoint 2007 timer service, which meant that the solution deplyment and solution retraction jobs would not run until one hour after the jobs were created. The work-around is basically to tell SharePoint to run the job yesterday. This will immediately kick start the timer job no matter the time zone and DST settings. Microsoft is aware of the bug and has created a knowledgebase articlew for it here: <a href="http://support.microsoft.com/kb/932563">http://support.microsoft.com/kb/932563</a></LI> 
+    <LI>Upgrade and Repair radio buttons are now selected by default.</LI> 
+</UL>
+  <P><strong>V1.0.2 - 2007-03-15</strong></P>
+  <UL>
+    <LI>Fixed bug where the repair operation failed with the error 'GUID should contain 32 digits with 4 dashes'.</LI> 
+    <li>Support for upgrading renamed solution files. A renamed solution file will now trigger the upgrade operation to do a full reinstall of the solution.</li>
+</UL>
+  <P><strong>V1.0.1 - 2007-03-15</strong></P>
+  <UL>
+    <LI>Fixed bug where the installer failed to launch when WSS 3.0 was not installed (WSS is required to install the solution in the end. But the installer must also be able to launch and tell the user that WSS is not installed).</LI>    
+</UL>
+  <P><strong>V1.0.0 - 2007-03-14</strong></P>
+  <ul>
+    <li>First release.</li>
+  </ul>
+</blockquote>
+</BODY></HTML>
