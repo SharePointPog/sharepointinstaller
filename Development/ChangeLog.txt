@@ -54,3 +54,6 @@ SharePoint Solution Installer Development V1 ChangeLog
 
 2016-02-10, Perry Rapp
  Display version numbers in upgrade form title
+
+2016-02-10, Perry Rapp
+ Release 1.2.14.0
