@@ -101,11 +101,12 @@ namespace CodePlex.SharePointInstaller
       return control;
     }
 
-    internal static InstallerControl CreateUpgradeControl()
+    internal static InstallerControl CreateUpgradeControl(string prompt)
     {
       bool bDefaultUpgrade = CodePlex.SharePointInstaller.InstallConfiguration.DefaultUpgrade;
       UpgradeControl control = new UpgradeControl(bDefaultUpgrade);
       control.Title = Resources.CommonUIStrings.controlTitleUpgradeRemove;
+      control.Title = prompt;
       control.SubTitle = Resources.CommonUIStrings.controlSubTitleSelectOperation;
       return control;
     }
