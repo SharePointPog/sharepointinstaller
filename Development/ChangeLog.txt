@@ -45,15 +45,15 @@ SharePoint Solution Installer Development V1 ChangeLog
   when no features specified
  Release 1.2.10.0
 
-2016-02-03, Perry Rapp
+2016-02-03, Perry
  Improve getting web application list; protected access to Solution.DeployedWebApplications
   and improve reporting when falling back to enumerating all webapps
 
-2016-02-04, Perry Rapp
+2016-02-04, Perry
  Release 1.2.12.0
 
-2016-02-10, Perry Rapp
+2016-02-10, Perry
  Display version numbers in upgrade form title
 
-2016-02-10, Perry Rapp
+2016-02-10, Perry
  Release 1.2.14.0
