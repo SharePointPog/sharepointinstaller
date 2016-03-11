@@ -31,7 +31,6 @@ namespace CodePlex.SharePointInstaller
         System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SystemCheckControl));
         this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
         this.messageLabel = new System.Windows.Forms.Label();
-        this.SolutionVersionLabel = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
         // tableLayoutPanel
@@ -51,14 +50,6 @@ namespace CodePlex.SharePointInstaller
         this.messageLabel.Font = null;
         this.messageLabel.Name = "messageLabel";
         // 
-        // SolutionVersionLabel
-        // 
-        this.SolutionVersionLabel.AccessibleDescription = null;
-        this.SolutionVersionLabel.AccessibleName = null;
-        resources.ApplyResources(this.SolutionVersionLabel, "SolutionVersionLabel");
-        this.SolutionVersionLabel.Font = null;
-        this.SolutionVersionLabel.Name = "SolutionVersionLabel";
-        // 
         // SystemCheckControl
         // 
         this.AccessibleDescription = null;
@@ -66,7 +57,6 @@ namespace CodePlex.SharePointInstaller
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackgroundImage = null;
-        this.Controls.Add(this.SolutionVersionLabel);
         this.Controls.Add(this.tableLayoutPanel);
         this.Controls.Add(this.messageLabel);
         this.Font = null;
@@ -79,6 +69,5 @@ namespace CodePlex.SharePointInstaller
 
     private System.Windows.Forms.TableLayoutPanel tableLayoutPanel;
     private System.Windows.Forms.Label messageLabel;
-    private System.Windows.Forms.Label SolutionVersionLabel;
   }
 }

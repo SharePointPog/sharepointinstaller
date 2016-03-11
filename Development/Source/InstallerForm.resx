@@ -126,7 +126,7 @@
     <value>0, 70</value>
   </data>
   <data name="contentPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>542, 302</value>
+    <value>542, 276</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="contentPanel.TabIndex" type="System.Int32, mscorlib">
@@ -243,43 +243,28 @@
   <data name="NextlayoutPanel.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="vendorLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="solutionLabel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
   </data>
-  <data name="vendorLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
+  <data name="solutionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
   </data>
-  <data name="vendorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="solutionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
   </data>
-  <data name="vendorLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 19</value>
+  <data name="solutionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="vendorLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 3</value>
+  <data name="&gt;&gt;solutionLabel.Name" xml:space="preserve">
+    <value>solutionLabel</value>
   </data>
-  <data name="vendorLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 16</value>
-  </data>
-  <data name="vendorLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="vendorLabel.Text" xml:space="preserve">
-    <value>www.codeplex.com/sharepointinstaller</value>
-  </data>
-  <data name="vendorLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>BottomLeft</value>
-  </data>
-  <data name="&gt;&gt;vendorLabel.Name" xml:space="preserve">
-    <value>vendorLabel</value>
-  </data>
-  <data name="&gt;&gt;vendorLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;solutionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;vendorLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;solutionLabel.Parent" xml:space="preserve">
     <value>NextlayoutPanel</value>
   </data>
-  <data name="&gt;&gt;vendorLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;solutionLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="NextPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
@@ -310,10 +295,10 @@
     <value>1</value>
   </data>
   <data name="NextPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>3, 25</value>
   </data>
   <data name="NextPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 13</value>
+    <value>282, 16</value>
   </data>
   <data name="NextPanel.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -330,6 +315,45 @@
   <data name="&gt;&gt;NextPanel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="vendorLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="vendorLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="vendorLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="vendorLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 44</value>
+  </data>
+  <data name="vendorLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 3</value>
+  </data>
+  <data name="vendorLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 16</value>
+  </data>
+  <data name="vendorLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="vendorLabel.Text" xml:space="preserve">
+    <value>www.codeplex.com/sharepointinstaller</value>
+  </data>
+  <data name="vendorLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>BottomLeft</value>
+  </data>
+  <data name="&gt;&gt;vendorLabel.Name" xml:space="preserve">
+    <value>vendorLabel</value>
+  </data>
+  <data name="&gt;&gt;vendorLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;vendorLabel.Parent" xml:space="preserve">
+    <value>NextlayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;vendorLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="productLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -337,7 +361,7 @@
     <value>Top</value>
   </data>
   <data name="productLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 38</value>
+    <value>3, 64</value>
   </data>
   <data name="productLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 13</value>
@@ -358,7 +382,7 @@
     <value>NextlayoutPanel</value>
   </data>
   <data name="&gt;&gt;productLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="NextlayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -367,7 +391,7 @@
     <value>3</value>
   </data>
   <data name="NextlayoutPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 58</value>
+    <value>288, 84</value>
   </data>
   <data name="NextlayoutPanel.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -385,19 +409,19 @@
     <value>3</value>
   </data>
   <data name="NextlayoutPanel.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="vendorLabel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="NextPanel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="productLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="solutionLabel" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="NextPanel" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="vendorLabel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="productLabel" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,50" /&gt;&lt;Rows Styles="Percent,50,Percent,50,Absolute,20,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="buttonPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
   </data>
   <data name="buttonPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 372</value>
+    <value>0, 346</value>
   </data>
   <data name="buttonPanel.RowCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="buttonPanel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>542, 64</value>
+    <value>542, 90</value>
   </data>
   <data name="buttonPanel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -505,7 +529,7 @@
     <value>Bottom</value>
   </data>
   <data name="bottomSeparatorPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 371</value>
+    <value>0, 345</value>
   </data>
   <data name="bottomSeparatorPanel.Size" type="System.Drawing.Size, System.Drawing">
     <value>542, 1</value>

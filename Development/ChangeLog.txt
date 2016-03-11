@@ -62,3 +62,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  InstallerForm_Load: Don't try to load "None" logo image
  Test that SPFarm.Local is accessible early, & bail with msgbox if not
  Add solution version info above system checks
+ Move solution version info into panel at bottom so always visible

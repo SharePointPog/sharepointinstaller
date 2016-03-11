@@ -100,7 +100,6 @@ namespace CodePlex.SharePointInstaller
 
     private void SystemCheckControl_Load(object sender, EventArgs e)
     {
-        this.SolutionVersionLabel.Text = ""; // will populate after checks
     }
 
     private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
@@ -153,7 +152,7 @@ namespace CodePlex.SharePointInstaller
 
         if (solution == null)
         {
-            caption = string.Format("Install {0} version {1}", solutionTitle, newVersion);
+            caption = string.Format("Install {0} {1}", solutionTitle, newVersion);
         }
         else
         {
@@ -161,16 +160,16 @@ namespace CodePlex.SharePointInstaller
             if (newVersion != installedVersion)
             {
                 string upgradePrompt = string.Format(
-                    "Upgrade {0} from version {1} to version {2}",
+                    "Upgrade {0} from {1} to {2}",
                     solutionTitle, installedVersion, newVersion);
                 caption = upgradePrompt;
             }
             else
             {
-                caption = string.Format("Repair/Remove {0} version {1}", solutionTitle, newVersion);
+                caption = string.Format("Repair/Remove {0} {1}", solutionTitle, newVersion);
             }
         }
-        this.SolutionVersionLabel.Text = caption;
+        Form.SetSolutionInfo(caption);
     }
 
     protected internal override void Close(InstallOptions options)

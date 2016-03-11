@@ -35,17 +35,18 @@ namespace CodePlex.SharePointInstaller
         this.prevButton = new System.Windows.Forms.Button();
         this.nextButton = new System.Windows.Forms.Button();
         this.NextlayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-        this.vendorLabel = new System.Windows.Forms.Label();
+        this.solutionLabel = new System.Windows.Forms.Label();
         this.NextPanel = new System.Windows.Forms.Panel();
         this.NextTextLabel = new System.Windows.Forms.Label();
         this.NextLabel = new System.Windows.Forms.Label();
+        this.vendorLabel = new System.Windows.Forms.Label();
+        this.productLabel = new System.Windows.Forms.Label();
         this.topSeparatorPanel = new System.Windows.Forms.Panel();
         this.bottomSeparatorPanel = new System.Windows.Forms.Panel();
         this.titlePanel = new System.Windows.Forms.Panel();
         this.logoPicture = new System.Windows.Forms.PictureBox();
         this.subTitleLabel = new System.Windows.Forms.Label();
         this.titleLabel = new System.Windows.Forms.Label();
-        this.productLabel = new System.Windows.Forms.Label();
         this.buttonPanel.SuspendLayout();
         this.NextlayoutPanel.SuspendLayout();
         this.NextPanel.SuspendLayout();
@@ -92,16 +93,17 @@ namespace CodePlex.SharePointInstaller
         // NextlayoutPanel
         // 
         resources.ApplyResources(this.NextlayoutPanel, "NextlayoutPanel");
-        this.NextlayoutPanel.Controls.Add(this.vendorLabel, 0, 1);
-        this.NextlayoutPanel.Controls.Add(this.NextPanel, 0, 0);
-        this.NextlayoutPanel.Controls.Add(this.productLabel, 0, 2);
+        this.NextlayoutPanel.Controls.Add(this.solutionLabel, 0, 0);
+        this.NextlayoutPanel.Controls.Add(this.NextPanel, 0, 1);
+        this.NextlayoutPanel.Controls.Add(this.vendorLabel, 0, 2);
+        this.NextlayoutPanel.Controls.Add(this.productLabel, 0, 3);
         this.NextlayoutPanel.Name = "NextlayoutPanel";
         // 
-        // vendorLabel
+        // solutionLabel
         // 
-        resources.ApplyResources(this.vendorLabel, "vendorLabel");
-        this.vendorLabel.ForeColor = System.Drawing.SystemColors.GrayText;
-        this.vendorLabel.Name = "vendorLabel";
+        resources.ApplyResources(this.solutionLabel, "solutionLabel");
+        this.solutionLabel.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+        this.solutionLabel.Name = "solutionLabel";
         // 
         // NextPanel
         // 
@@ -119,6 +121,18 @@ namespace CodePlex.SharePointInstaller
         // 
         resources.ApplyResources(this.NextLabel, "NextLabel");
         this.NextLabel.Name = "NextLabel";
+        // 
+        // vendorLabel
+        // 
+        resources.ApplyResources(this.vendorLabel, "vendorLabel");
+        this.vendorLabel.ForeColor = System.Drawing.SystemColors.GrayText;
+        this.vendorLabel.Name = "vendorLabel";
+        // 
+        // productLabel
+        // 
+        resources.ApplyResources(this.productLabel, "productLabel");
+        this.productLabel.ForeColor = System.Drawing.SystemColors.GrayText;
+        this.productLabel.Name = "productLabel";
         // 
         // topSeparatorPanel
         // 
@@ -160,12 +174,6 @@ namespace CodePlex.SharePointInstaller
         this.titleLabel.BackColor = System.Drawing.Color.Transparent;
         this.titleLabel.Name = "titleLabel";
         // 
-        // productLabel
-        // 
-        resources.ApplyResources(this.productLabel, "productLabel");
-        this.productLabel.ForeColor = System.Drawing.SystemColors.GrayText;
-        this.productLabel.Name = "productLabel";
-        // 
         // InstallerForm
         // 
         resources.ApplyResources(this, "$this");
@@ -205,6 +213,7 @@ namespace CodePlex.SharePointInstaller
     private System.Windows.Forms.TableLayoutPanel buttonPanel;
     private System.Windows.Forms.PictureBox logoPicture;
     private System.Windows.Forms.TableLayoutPanel NextlayoutPanel;
+    private System.Windows.Forms.Label solutionLabel;
     private System.Windows.Forms.Label vendorLabel;
     private System.Windows.Forms.Panel NextPanel;
     private System.Windows.Forms.Label NextTextLabel;

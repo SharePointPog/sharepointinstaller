@@ -155,6 +155,10 @@ namespace CodePlex.SharePointInstaller
     {
       subTitleLabel.Text = title;
     }
+    public void SetSolutionInfo(string msg)
+    {
+        solutionLabel.Text = msg;
+    }
 
       /// <summary>
       /// Store Next Title to be used for most recently added control
