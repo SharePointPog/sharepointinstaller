@@ -57,3 +57,6 @@ SharePoint Solution Installer Development V1 ChangeLog
 
 2016-02-10, Perry
  Release 1.2.14.0
+
+2016-03-11, Perry
+ InstallerForm_Load: Don't try to load "None" logo image

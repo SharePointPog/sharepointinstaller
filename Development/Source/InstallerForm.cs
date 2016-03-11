@@ -60,9 +60,16 @@ namespace CodePlex.SharePointInstaller
       string logoImageFile = InstallConfiguration.LogoImage;
       if (!String.IsNullOrEmpty(logoImageFile))
       {
-        if (logoImageFile != "Default")
+        if (logoImageFile == "Default")
         {
-          this.logoPicture.BackgroundImage = LoadImage(logoImageFile);
+        }
+        else if (logoImageFile == "None")
+        {
+            this.logoPicture.BackgroundImage = LoadImage(logoImageFile);
+        }
+        else
+        {
+            this.logoPicture.BackgroundImage = LoadImage(logoImageFile);
         }
       }
 
