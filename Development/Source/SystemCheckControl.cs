@@ -100,6 +100,7 @@ namespace CodePlex.SharePointInstaller
 
     private void SystemCheckControl_Load(object sender, EventArgs e)
     {
+        this.SolutionVersionLabel.Text = ""; // will populate after checks
     }
 
     private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
@@ -117,6 +118,8 @@ namespace CodePlex.SharePointInstaller
       }
 
       FinalizeChecks();
+      CheckSolutionVersionsAndSetCaption();
+
     }
 
     #endregion
@@ -137,6 +140,37 @@ namespace CodePlex.SharePointInstaller
         timer.Tick += new EventHandler(TimerEventProcessor);
         timer.Start();
       }
+    }
+
+    protected void CheckSolutionVersionsAndSetCaption()
+    {
+        SolutionCheck check = (SolutionCheck)checks["SolutionCheck"];
+        SPSolution solution = check.Solution;
+
+        Version newVersion = InstallConfiguration.SolutionVersion;
+        string solutionTitle = InstallConfiguration.SolutionTitle;
+        string caption;
+
+        if (solution == null)
+        {
+            caption = string.Format("Install {0} version {1}", solutionTitle, newVersion);
+        }
+        else
+        {
+            Version installedVersion = InstallConfiguration.InstalledVersion;
+            if (newVersion != installedVersion)
+            {
+                string upgradePrompt = string.Format(
+                    "Upgrade {0} from version {1} to version {2}",
+                    solutionTitle, installedVersion, newVersion);
+                caption = upgradePrompt;
+            }
+            else
+            {
+                caption = string.Format("Repair/Remove {0} version {1}", solutionTitle, newVersion);
+            }
+        }
+        this.SolutionVersionLabel.Text = caption;
     }
 
     protected internal override void Close(InstallOptions options)
@@ -353,6 +387,7 @@ namespace CodePlex.SharePointInstaller
         SolutionCheck check = (SolutionCheck)checks["SolutionCheck"];
         SPSolution solution = check.Solution;
 
+        Version newVersion = InstallConfiguration.SolutionVersion;
 
         if (solution == null)
         {
@@ -361,7 +396,6 @@ namespace CodePlex.SharePointInstaller
         else
         {
             Version installedVersion = InstallConfiguration.InstalledVersion;
-            Version newVersion = InstallConfiguration.SolutionVersion;
 
             if (newVersion != installedVersion)
             {

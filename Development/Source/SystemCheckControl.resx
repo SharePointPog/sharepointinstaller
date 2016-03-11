@@ -121,9 +121,15 @@
   <data name="$this.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>30, 30, 20, 20</value>
   </data>
+  <data name="&gt;&gt;SolutionVersionLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>496, 400</value>
+  </data>
+  <data name="&gt;&gt;SolutionVersionLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>446, 40</value>
@@ -138,35 +144,44 @@
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>SystemCheckControl</value>
   </data>
-  <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 30</value>
-  </data>
-  <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tableLayoutPanel.Name" xml:space="preserve">
-    <value>tableLayoutPanel</value>
-  </data>
   <data name="messageLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 340</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
-  </data>
-  <data name="&gt;&gt;messageLabel.Name" xml:space="preserve">
-    <value>messageLabel</value>
+  <data name="SolutionVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;SolutionVersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tableLayoutPanel.Name" xml:space="preserve">
+    <value>tableLayoutPanel</value>
+  </data>
+  <data name="&gt;&gt;messageLabel.Name" xml:space="preserve">
+    <value>messageLabel</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.2.14.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
+  </data>
+  <data name="messageLabel.Text" xml:space="preserve">
+    <value>Please wait...</value>
+  </data>
   <data name="messageLabel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Bottom</value>
+  </data>
+  <data name="&gt;&gt;SolutionVersionLabel.Name" xml:space="preserve">
+    <value>SolutionVersionLabel</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;messageLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -186,13 +201,19 @@
   <data name="messageLabel.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 10, 0, 0</value>
   </data>
-  <data name="messageLabel.Text" xml:space="preserve">
-    <value>Please wait...</value>
+  <data name="tableLayoutPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 30</value>
   </data>
   <data name="tableLayoutPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="SolutionVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
   <data name="tableLayoutPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="SolutionVersionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
