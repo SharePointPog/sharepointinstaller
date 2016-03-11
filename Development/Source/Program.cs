@@ -60,7 +60,14 @@ namespace CodePlex.SharePointInstaller
       }
       else
       {
-          Application.Run(form);
+          if (SystemCheckControl.CanContactFarm())
+          {
+              Application.Run(form);
+          }
+          else
+          {
+              MessageBox.Show("Cannot contact farm", "Farm Failure");
+          }
       }
     }
 

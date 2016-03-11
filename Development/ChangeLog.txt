@@ -60,3 +60,4 @@ SharePoint Solution Installer Development V1 ChangeLog
 
 2016-03-11, Perry
  InstallerForm_Load: Don't try to load "None" logo image
+ Test that SPFarm.Local is accessible early, & bail with msgbox if not

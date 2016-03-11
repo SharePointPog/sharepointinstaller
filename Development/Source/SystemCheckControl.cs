@@ -59,6 +59,17 @@ namespace CodePlex.SharePointInstaller
 
     #region Public Properties
 
+    public static bool CanContactFarm()
+    {
+        try
+        {
+            return SPFarm.Local != null;
+        }
+        catch
+        {
+            return false;
+        }
+    }
     public bool RequireMOSS
     {
       get { return requireMOSS; }
