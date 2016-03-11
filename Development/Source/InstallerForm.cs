@@ -65,7 +65,7 @@ namespace CodePlex.SharePointInstaller
         }
         else if (logoImageFile == "None")
         {
-            this.logoPicture.BackgroundImage = LoadImage(logoImageFile);
+            this.logoPicture.BackgroundImage = null;
         }
         else
         {
