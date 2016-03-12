@@ -117,18 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Name" xml:space="preserve">
+    <value>doactivateFeaturesChoice</value>
+  </data>
   <data name="&gt;&gt;upgradeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="hintLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="messageLabel.Text" xml:space="preserve">
-    <value>Another version of {SolutionTitle} is already installed. What would you like to do?</value>
-  </data>
   <data name="&gt;&gt;upgradeRadioButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="messageLabel.Location" type="System.Drawing.Point, System.Drawing">
@@ -136,6 +136,9 @@
   </data>
   <data name="&gt;&gt;upgradeDescriptionLabel.Name" xml:space="preserve">
     <value>upgradeDescriptionLabel</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 185</value>
   </data>
   <data name="upgradeRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -149,8 +152,8 @@
   <data name="upgradeDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>494, 60</value>
   </data>
-  <data name="&gt;&gt;messageLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;upgradeRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -161,17 +164,32 @@
   <data name="removeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 143</value>
   </data>
+  <data name="doactivateFeaturesChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;upgradeRadioButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;removeRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="removeDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 35</value>
+  <data name="messageLabel.Text" xml:space="preserve">
+    <value>Another version of {SolutionTitle} is already installed. What would you like to do?</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;upgradeRadioButton.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="doactivateFeaturesChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 208</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="removeRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;doactivateFeaturesChoice.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;hintLabel.Name" xml:space="preserve">
     <value>hintLabel</value>
@@ -179,14 +197,17 @@
   <data name="&gt;&gt;hintLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;removeDescriptionLabel.Name" xml:space="preserve">
+    <value>removeDescriptionLabel</value>
+  </data>
   <data name="removeRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="upgradeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>30, 60</value>
+  <data name="&gt;&gt;removeDescriptionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="removeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
@@ -198,31 +219,37 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
+    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.2.14.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
   </data>
   <data name="upgradeDescriptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="upgradeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 17</value>
+  <data name="&gt;&gt;messageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="messageLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;removeDescriptionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="upgradeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 60</value>
   </data>
   <data name="upgradeDescriptionLabel.Text" xml:space="preserve">
     <value>Upgrade description...</value>
   </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="&gt;&gt;removeRadioButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="removeDescriptionLabel.Text" xml:space="preserve">
     <value>Retracts the solution from all web applications and deletes it from the SharePoint solution store.</value>
+  </data>
+  <data name="&gt;&gt;hintLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="hintLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>286, 13</value>
@@ -233,23 +260,29 @@
   <data name="hintLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="removeRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="removeDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 35</value>
   </data>
   <data name="&gt;&gt;upgradeRadioButton.Name" xml:space="preserve">
     <value>upgradeRadioButton</value>
   </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="$this.Size" type="System.Drawing.Size, System.Drawing">
     <value>600, 400</value>
   </data>
-  <data name="&gt;&gt;messageLabel.Name" xml:space="preserve">
-    <value>messageLabel</value>
+  <data name="upgradeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 17</value>
   </data>
   <data name="&gt;&gt;upgradeDescriptionLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;hintLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;messageLabel.Name" xml:space="preserve">
+    <value>messageLabel</value>
   </data>
   <data name="upgradeDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 80</value>
@@ -272,8 +305,11 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Name" xml:space="preserve">
+    <value>dodeactivateFeaturesChoice</value>
+  </data>
   <data name="&gt;&gt;hintLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="removeDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 163</value>
@@ -284,11 +320,11 @@
   <data name="&gt;&gt;messageLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;removeDescriptionLabel.Name" xml:space="preserve">
-    <value>removeDescriptionLabel</value>
-  </data>
   <data name="removeRadioButton.Text" xml:space="preserve">
     <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>385, 13</value>

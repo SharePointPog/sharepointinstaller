@@ -53,8 +53,8 @@ namespace CodePlex.SharePointInstaller
         Form.Operation = InstallOperation.Repair;
         Form.NextButton.Enabled = true;
         doactivateFeaturesChoice.Checked = Form.WillActivateFeatures;
+        UpdateButtons();
       }
-      UpdateButtons();
     }
 
     private void removeRadioButton_CheckedChanged(object sender, EventArgs e)
