@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="repairRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -174,7 +174,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repairRadioButton.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="removeRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,7 +204,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;removeRadioButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="hintLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hintLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="removeDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 112</value>
@@ -255,7 +255,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="repairDescriptionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -282,6 +282,66 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repairDescriptionLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 150</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 17</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="dodeactivateFeaturesChoice.Text" xml:space="preserve">
+    <value>Deactivate features</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Name" xml:space="preserve">
+    <value>dodeactivateFeaturesChoice</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="doactivateFeaturesChoice.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="doactivateFeaturesChoice.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 8.25pt, style=Bold</value>
+  </data>
+  <data name="doactivateFeaturesChoice.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 173</value>
+  </data>
+  <data name="doactivateFeaturesChoice.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 17</value>
+  </data>
+  <data name="doactivateFeaturesChoice.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="doactivateFeaturesChoice.Text" xml:space="preserve">
+    <value>Activate features</value>
+  </data>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Name" xml:space="preserve">
+    <value>doactivateFeaturesChoice</value>
+  </data>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;doactivateFeaturesChoice.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;doactivateFeaturesChoice.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -297,6 +357,6 @@
     <value>RepairControl</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
+    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.2.14.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
   </data>
 </root>

@@ -1,0 +1,6 @@
+Commands are created & queued up in InstallProcessControl.Open
+These are then dequeued & executed in InstallProcessControl.TimerEventInstall
+
+These commands include ActivationCommands to activate or deactivate features
+
+InstallerControl has a Form property to access the InstallerForm

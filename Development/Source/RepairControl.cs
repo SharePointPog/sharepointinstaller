@@ -37,6 +37,9 @@ namespace CodePlex.SharePointInstaller
       bool enable = repairRadioButton.Checked || removeRadioButton.Checked;
       Form.Operation = InstallOperation.Repair;
       Form.NextButton.Enabled = enable;
+      doactivateFeaturesChoice.Checked = Form.WillActivateFeatures;
+      dodeactivateFeaturesChoice.Checked = Form.WillDeactivateFeatures;
+      UpdateButtons();
     }
 
     protected internal override void Close(InstallOptions options)
@@ -49,7 +52,9 @@ namespace CodePlex.SharePointInstaller
       {
         Form.Operation = InstallOperation.Repair;
         Form.NextButton.Enabled = true;
+        doactivateFeaturesChoice.Checked = Form.WillActivateFeatures;
       }
+      UpdateButtons();
     }
 
     private void removeRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -58,8 +63,30 @@ namespace CodePlex.SharePointInstaller
       {
         Form.Operation = InstallOperation.Uninstall;
         Form.NextButton.Enabled = true;
+          // Clear visual check for activate, as it is not relevant now
+          // but preserve underlying setting, in case user reenables it
+        bool activpref = Form.WillActivateFeatures;
+        doactivateFeaturesChoice.Checked = false;
+        Form.WillActivateFeatures = activpref;
       }
+      UpdateButtons();
     }
 
+    private void dodeactivateFeaturesChoice_CheckedChanged(object sender, EventArgs e)
+    {
+        Form.WillDeactivateFeatures = dodeactivateFeaturesChoice.Checked;
+        UpdateButtons();
+    }
+
+    private void doactivateFeaturesChoice_CheckedChanged(object sender, EventArgs e)
+    {
+        Form.WillActivateFeatures = doactivateFeaturesChoice.Checked;
+        UpdateButtons();
+    }
+
+    private void UpdateButtons()
+    {
+        doactivateFeaturesChoice.Enabled = repairRadioButton.Checked && dodeactivateFeaturesChoice.Checked;
+    }
   }
 }

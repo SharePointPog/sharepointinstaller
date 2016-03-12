@@ -63,3 +63,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  Test that SPFarm.Local is accessible early, & bail with msgbox if not
  Add solution version info above system checks
  Move solution version info into panel at bottom so always visible
+ Add checkboxes for user to choose deactivate & activate in Repair/Remove cases

@@ -214,26 +214,29 @@ namespace CodePlex.SharePointInstaller
           executeCommands.Add(new AddSolutionCommand(this));
           executeCommands.Add(new CreateDeploymentJobCommand(this, options.WebApplicationTargets));
           executeCommands.Add(new WaitForJobCompletionCommand(this, CommonUIStrings.waitForSolutionDeployment));
-          if (featureScope == SPFeatureScope.Farm)
+          if (Form.WillActivateFeatures)
           {
-            // TODO: synthesize FeatureLocs for the farm features
-            executeCommands.Add(new ActivateFarmFeatureCommand(this));
-          }
-          else if (featureScope == SPFeatureScope.Site)
-          {
-              // TODO: Revise site collection choice to produce FeatureLocs structure
-              // and get rid of SiteCollectionLocs
-              siteCollectionLocs = options.SiteCollectionTargets;
-              if (siteCollectionLocs == null || siteCollectionLocs.Count == 0)
+              if (featureScope == SPFeatureScope.Farm)
               {
-                  log.Info(CommonUIStrings.logNoSiteCollectionsSpecified);
+                  // TODO: synthesize FeatureLocs for the farm features
+                  executeCommands.Add(new ActivateFarmFeatureCommand(this));
               }
-              else
+              else if (featureScope == SPFeatureScope.Site)
               {
-                  executeCommands.Add(new ActivateSiteCollectionFeatureCommand(this, siteCollectionLocs));
+                  // TODO: Revise site collection choice to produce FeatureLocs structure
+                  // and get rid of SiteCollectionLocs
+                  siteCollectionLocs = options.SiteCollectionTargets;
+                  if (siteCollectionLocs == null || siteCollectionLocs.Count == 0)
+                  {
+                      log.Info(CommonUIStrings.logNoSiteCollectionsSpecified);
+                  }
+                  else
+                  {
+                      executeCommands.Add(new ActivateSiteCollectionFeatureCommand(this, siteCollectionLocs));
+                  }
               }
+              // TODO - web selection for installation
           }
-          // TODO - web selection for installation
           executeCommands.Add(new RegisterVersionNumberCommand(this));
 
           for (int i = executeCommands.Count-1; i<=0; i--)
@@ -246,7 +249,7 @@ namespace CodePlex.SharePointInstaller
           case InstallOperation.Upgrade:
           {
               FeatureLocations flocs = InstallProcessControl.GetFeaturedLocations(this.Form.Operation);
-              if (flocs.LocationsCount > 0)
+              if (Form.WillDeactivateFeatures && flocs.LocationsCount > 0)
               {
                   executeCommands.Add(FeaturesCommand.CreateDeactivatorCommand(this, Form.Operation));
               }
@@ -264,7 +267,7 @@ namespace CodePlex.SharePointInstaller
                   executeCommands.Add(new CreateDeploymentJobCommand(this, GetDeployedApplications()));
                   executeCommands.Add(new WaitForJobCompletionCommand(this, CommonUIStrings.waitForSolutionDeployment));
               }
-              if (flocs.LocationsCount > 0)
+              if (Form.WillActivateFeatures && flocs.LocationsCount > 0)
               {
                   executeCommands.Add(FeaturesCommand.CreateActivatorCommand(this, Form.Operation));
               }
@@ -276,7 +279,7 @@ namespace CodePlex.SharePointInstaller
           case InstallOperation.Repair:
           {
               FeatureLocations flocs = InstallProcessControl.GetFeaturedLocations(this.Form.Operation);
-              if (flocs.LocationsCount > 0)
+              if (Form.WillDeactivateFeatures && flocs.LocationsCount > 0)
               {
                   executeCommands.Add(FeaturesCommand.CreateDeactivatorCommand(this, Form.Operation));
               }
@@ -286,7 +289,7 @@ namespace CodePlex.SharePointInstaller
               executeCommands.Add(new AddSolutionCommand(this));
               executeCommands.Add(new CreateDeploymentJobCommand(this, GetDeployedApplications()));
               executeCommands.Add(new WaitForJobCompletionCommand(this, CommonUIStrings.waitForSolutionDeployment));
-              if (flocs.LocationsCount > 0)
+              if (Form.WillActivateFeatures && flocs.LocationsCount > 0)
               {
                   executeCommands.Add(FeaturesCommand.CreateActivatorCommand(this, Form.Operation));
               }
@@ -297,7 +300,7 @@ namespace CodePlex.SharePointInstaller
         case InstallOperation.Uninstall:
           {
               FeatureLocations flocs = InstallProcessControl.GetFeaturedLocations(this.Form.Operation);
-              if (flocs.LocationsCount > 0)
+              if (Form.WillDeactivateFeatures && flocs.LocationsCount > 0)
               {
                   executeCommands.Add(FeaturesCommand.CreateDeactivatorCommand(this, Form.Operation));
               }

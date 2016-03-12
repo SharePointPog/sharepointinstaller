@@ -35,6 +35,8 @@ namespace CodePlex.SharePointInstaller
         this.hintLabel = new System.Windows.Forms.Label();
         this.removeDescriptionLabel = new System.Windows.Forms.Label();
         this.repairDescriptionLabel = new System.Windows.Forms.Label();
+        this.dodeactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
+        this.doactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
         this.SuspendLayout();
         // 
         // messageLabel
@@ -73,10 +75,26 @@ namespace CodePlex.SharePointInstaller
         resources.ApplyResources(this.repairDescriptionLabel, "repairDescriptionLabel");
         this.repairDescriptionLabel.Name = "repairDescriptionLabel";
         // 
+        // dodeactivateFeaturesChoice
+        // 
+        resources.ApplyResources(this.dodeactivateFeaturesChoice, "dodeactivateFeaturesChoice");
+        this.dodeactivateFeaturesChoice.Name = "dodeactivateFeaturesChoice";
+        this.dodeactivateFeaturesChoice.UseVisualStyleBackColor = true;
+        this.dodeactivateFeaturesChoice.CheckedChanged += new System.EventHandler(this.dodeactivateFeaturesChoice_CheckedChanged);
+        // 
+        // doactivateFeaturesChoice
+        // 
+        resources.ApplyResources(this.doactivateFeaturesChoice, "doactivateFeaturesChoice");
+        this.doactivateFeaturesChoice.Name = "doactivateFeaturesChoice";
+        this.doactivateFeaturesChoice.UseVisualStyleBackColor = true;
+        this.doactivateFeaturesChoice.CheckedChanged += new System.EventHandler(this.doactivateFeaturesChoice_CheckedChanged);
+        // 
         // RepairControl
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.Controls.Add(this.doactivateFeaturesChoice);
+        this.Controls.Add(this.dodeactivateFeaturesChoice);
         this.Controls.Add(this.repairDescriptionLabel);
         this.Controls.Add(this.removeDescriptionLabel);
         this.Controls.Add(this.hintLabel);
@@ -97,5 +115,7 @@ namespace CodePlex.SharePointInstaller
     private System.Windows.Forms.Label hintLabel;
     private System.Windows.Forms.Label removeDescriptionLabel;
     private System.Windows.Forms.Label repairDescriptionLabel;
+    private System.Windows.Forms.CheckBox dodeactivateFeaturesChoice;
+    private System.Windows.Forms.CheckBox doactivateFeaturesChoice;
   }
 }

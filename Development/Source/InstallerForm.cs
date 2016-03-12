@@ -28,6 +28,8 @@ namespace CodePlex.SharePointInstaller
     private readonly InstallerControlList contentControls;
     private readonly InstallOptions options;
     private InstallOperation operation = InstallOperation.Install;
+    private bool willActivateFeatures = true;
+    private bool willDeactivateFeatures = true;
     private InstallerControl currentContentControl;
     private int currentContentControlIndex = 0;
 
@@ -137,6 +139,18 @@ namespace CodePlex.SharePointInstaller
     {
       get { return operation; }
       set { operation = value; }
+    }
+
+    public bool WillActivateFeatures
+    {
+        get { return willActivateFeatures; }
+        set { willActivateFeatures = value; }
+    }
+
+    public bool WillDeactivateFeatures
+    {
+        get { return willDeactivateFeatures; }
+        set { willDeactivateFeatures = value; }
     }
 
     #endregion
