@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Text;
+using System.Text;
 
 using Microsoft.SharePoint.Administration;
 using Microsoft.SharePoint;
@@ -92,6 +92,11 @@ namespace CodePlex.SharePointInstaller
         public List<FeatureLoc> SiteLocations = new List<FeatureLoc>();
         public List<FeatureLoc> WebAppLocations = new List<FeatureLoc>();
         public List<FeatureLoc> FarmLocations = new List<FeatureLoc>();
+        public int GetTotalFeatureLocations()
+        {
+            return WebLocations.Count + SiteLocations.Count
+                + WebAppLocations.Count + FarmLocations.Count;
+        }
         // Other data
         private int _LocationsCount = 0;
         private int _ActivationsCount = 0;

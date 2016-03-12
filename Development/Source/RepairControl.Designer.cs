@@ -37,6 +37,7 @@ namespace CodePlex.SharePointInstaller
         this.repairDescriptionLabel = new System.Windows.Forms.Label();
         this.dodeactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
         this.doactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
+        this.featureLocationSummaryLabel = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
         // messageLabel
@@ -89,10 +90,16 @@ namespace CodePlex.SharePointInstaller
         this.doactivateFeaturesChoice.UseVisualStyleBackColor = true;
         this.doactivateFeaturesChoice.CheckedChanged += new System.EventHandler(this.doactivateFeaturesChoice_CheckedChanged);
         // 
+        // featureLocationSummaryLabel
+        // 
+        resources.ApplyResources(this.featureLocationSummaryLabel, "featureLocationSummaryLabel");
+        this.featureLocationSummaryLabel.Name = "featureLocationSummaryLabel";
+        // 
         // RepairControl
         // 
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+        this.Controls.Add(this.featureLocationSummaryLabel);
         this.Controls.Add(this.doactivateFeaturesChoice);
         this.Controls.Add(this.dodeactivateFeaturesChoice);
         this.Controls.Add(this.repairDescriptionLabel);
@@ -117,5 +124,6 @@ namespace CodePlex.SharePointInstaller
     private System.Windows.Forms.Label repairDescriptionLabel;
     private System.Windows.Forms.CheckBox dodeactivateFeaturesChoice;
     private System.Windows.Forms.CheckBox doactivateFeaturesChoice;
+    private System.Windows.Forms.Label featureLocationSummaryLabel;
   }
 }

@@ -159,4 +159,16 @@
   <data name="dodeactivateFeaturesChoice.Text" xml:space="preserve">
     <value>Deactivate features</value>
   </data>
+  <data name="featureLocationSummaryLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 237</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 13</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Text" xml:space="preserve">
+    <value>(feature location summary)</value>
+  </data>
 </root>

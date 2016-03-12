@@ -144,7 +144,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="repairRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -174,7 +174,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repairRadioButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="removeRadioButton.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -204,7 +204,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;removeRadioButton.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="hintLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -231,7 +231,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;hintLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="removeDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 112</value>
@@ -255,7 +255,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="repairDescriptionLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -282,7 +282,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;repairDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="dodeactivateFeaturesChoice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -312,7 +312,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;dodeactivateFeaturesChoice.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="doactivateFeaturesChoice.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -342,6 +342,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;doactivateFeaturesChoice.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="featureLocationSummaryLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 197</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 13</value>
+  </data>
+  <data name="featureLocationSummaryLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="featureLocationSummaryLabel.Text" xml:space="preserve">
+    <value>(Feature Location Summary)</value>
+  </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Name" xml:space="preserve">
+    <value>featureLocationSummaryLabel</value>
+  </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

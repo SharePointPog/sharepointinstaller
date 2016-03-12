@@ -28,7 +28,6 @@ namespace CodePlex.SharePointInstaller
     {
       InitializeComponent();
 
-
       messageLabel.Text = InstallConfiguration.FormatString(messageLabel.Text);
     }
 
@@ -39,7 +38,7 @@ namespace CodePlex.SharePointInstaller
       Form.NextButton.Enabled = enable;
       doactivateFeaturesChoice.Checked = Form.WillActivateFeatures;
       dodeactivateFeaturesChoice.Checked = Form.WillDeactivateFeatures;
-      UpdateButtons();
+      UpdateDisplay();
     }
 
     protected internal override void Close(InstallOptions options)
@@ -53,7 +52,7 @@ namespace CodePlex.SharePointInstaller
         Form.Operation = InstallOperation.Repair;
         Form.NextButton.Enabled = true;
         doactivateFeaturesChoice.Checked = Form.WillActivateFeatures;
-        UpdateButtons();
+        UpdateDisplay();
       }
     }
 
@@ -63,30 +62,42 @@ namespace CodePlex.SharePointInstaller
       {
         Form.Operation = InstallOperation.Uninstall;
         Form.NextButton.Enabled = true;
-          // Clear visual check for activate, as it is not relevant now
+        // Clear visual check for activate, as it is not relevant now
           // but preserve underlying setting, in case user reenables it
         bool activpref = Form.WillActivateFeatures;
         doactivateFeaturesChoice.Checked = false;
         Form.WillActivateFeatures = activpref;
+        UpdateDisplay();
       }
-      UpdateButtons();
     }
 
     private void dodeactivateFeaturesChoice_CheckedChanged(object sender, EventArgs e)
     {
         Form.WillDeactivateFeatures = dodeactivateFeaturesChoice.Checked;
-        UpdateButtons();
+        UpdateDisplay();
     }
 
     private void doactivateFeaturesChoice_CheckedChanged(object sender, EventArgs e)
     {
         Form.WillActivateFeatures = doactivateFeaturesChoice.Checked;
-        UpdateButtons();
+        UpdateDisplay();
     }
 
-    private void UpdateButtons()
+    private void UpdateDisplay()
     {
-        doactivateFeaturesChoice.Enabled = repairRadioButton.Checked && dodeactivateFeaturesChoice.Checked;
+        FeatureLocations fLocs = InstallProcessControl.GetFeaturedLocations(Form.Operation);
+        string locationSummary = (new LocationDisplay(fLocs)).GetLocationSummary();
+        featureLocationSummaryLabel.Text = locationSummary;
+        if (fLocs.GetTotalFeatureLocations() == 0)
+        {
+            dodeactivateFeaturesChoice.Enabled = false;
+            doactivateFeaturesChoice.Enabled = false;
+        }
+        else
+        {
+            dodeactivateFeaturesChoice.Enabled = true;
+            doactivateFeaturesChoice.Enabled = repairRadioButton.Checked && dodeactivateFeaturesChoice.Checked;
+        }
     }
   }
 }

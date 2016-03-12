@@ -37,6 +37,7 @@ namespace CodePlex.SharePointInstaller
         this.removeDescriptionLabel = new System.Windows.Forms.Label();
         this.doactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
         this.dodeactivateFeaturesChoice = new System.Windows.Forms.CheckBox();
+        this.featureLocationSummaryLabel = new System.Windows.Forms.Label();
         this.SuspendLayout();
         // 
         // upgradeRadioButton
@@ -113,6 +114,14 @@ namespace CodePlex.SharePointInstaller
         this.dodeactivateFeaturesChoice.UseVisualStyleBackColor = true;
         this.dodeactivateFeaturesChoice.CheckedChanged += new System.EventHandler(this.dodeactivateFeaturesChoice_CheckedChanged);
         // 
+        // featureLocationSummaryLabel
+        // 
+        this.featureLocationSummaryLabel.AccessibleDescription = null;
+        this.featureLocationSummaryLabel.AccessibleName = null;
+        resources.ApplyResources(this.featureLocationSummaryLabel, "featureLocationSummaryLabel");
+        this.featureLocationSummaryLabel.Font = null;
+        this.featureLocationSummaryLabel.Name = "featureLocationSummaryLabel";
+        // 
         // UpgradeControl
         // 
         this.AccessibleDescription = null;
@@ -120,6 +129,7 @@ namespace CodePlex.SharePointInstaller
         resources.ApplyResources(this, "$this");
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         this.BackgroundImage = null;
+        this.Controls.Add(this.featureLocationSummaryLabel);
         this.Controls.Add(this.doactivateFeaturesChoice);
         this.Controls.Add(this.dodeactivateFeaturesChoice);
         this.Controls.Add(this.removeDescriptionLabel);
@@ -145,5 +155,6 @@ namespace CodePlex.SharePointInstaller
     private System.Windows.Forms.Label removeDescriptionLabel;
     private System.Windows.Forms.CheckBox doactivateFeaturesChoice;
     private System.Windows.Forms.CheckBox dodeactivateFeaturesChoice;
+    private System.Windows.Forms.Label featureLocationSummaryLabel;
   }
 }

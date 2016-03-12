@@ -391,13 +391,8 @@ namespace CodePlex.SharePointInstaller
         // if we want to do override feature lists for different operations
 
         // cached
-        if (FeaturedLocationList != null)
+        if (FeaturedLocationList != null && operation == FeaturedOperation)
         {
-            if (operation != FeaturedOperation)
-            {
-                // should not happen
-                return null;
-            }
             return FeaturedLocationList;
         }
         FeaturedOperation = operation;

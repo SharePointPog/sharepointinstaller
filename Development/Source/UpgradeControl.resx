@@ -121,14 +121,20 @@
     <value>doactivateFeaturesChoice</value>
   </data>
   <data name="&gt;&gt;upgradeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="hintLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.2.14.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
+  </data>
+  <data name="featureLocationSummaryLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;upgradeRadioButton.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="messageLabel.Location" type="System.Drawing.Point, System.Drawing">
@@ -161,6 +167,9 @@
   <data name="hintLabel.Text" xml:space="preserve">
     <value>Please click the Next button to start the selected operation.</value>
   </data>
+  <data name="featureLocationSummaryLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>30, 228</value>
+  </data>
   <data name="removeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 143</value>
   </data>
@@ -173,8 +182,8 @@
   <data name="&gt;&gt;removeRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="messageLabel.Text" xml:space="preserve">
-    <value>Another version of {SolutionTitle} is already installed. What would you like to do?</value>
+  <data name="removeDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 35</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.Parent" xml:space="preserve">
     <value>$this</value>
@@ -182,14 +191,17 @@
   <data name="doactivateFeaturesChoice.Location" type="System.Drawing.Point, System.Drawing">
     <value>33, 208</value>
   </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="dodeactivateFeaturesChoice.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
-  <data name="removeRadioButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;doactivateFeaturesChoice.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;hintLabel.Name" xml:space="preserve">
     <value>hintLabel</value>
@@ -207,7 +219,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;removeDescriptionLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="removeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>71, 17</value>
@@ -218,8 +230,8 @@
   <data name="&gt;&gt;upgradeDescriptionLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>CodePlex.SharePointInstaller.InstallerControl, Setup, Version=1.2.14.0, Culture=neutral, PublicKeyToken=cb87ba0215b862e1</value>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
   </data>
   <data name="upgradeDescriptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -228,7 +240,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;messageLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="messageLabel.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -243,7 +255,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;removeRadioButton.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="removeDescriptionLabel.Text" xml:space="preserve">
     <value>Retracts the solution from all web applications and deletes it from the SharePoint solution store.</value>
@@ -260,11 +272,14 @@
   <data name="hintLabel.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="removeDescriptionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 35</value>
+  <data name="removeRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
   </data>
   <data name="&gt;&gt;upgradeRadioButton.Name" xml:space="preserve">
     <value>upgradeRadioButton</value>
+  </data>
+  <data name="&gt;&gt;dodeactivateFeaturesChoice.Name" xml:space="preserve">
+    <value>dodeactivateFeaturesChoice</value>
   </data>
   <data name="&gt;&gt;dodeactivateFeaturesChoice.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -290,8 +305,8 @@
   <data name="removeDescriptionLabel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="upgradeRadioButton.Text" xml:space="preserve">
-    <value>Upgrade</value>
+  <data name="&gt;&gt;featureLocationSummaryLabel.Name" xml:space="preserve">
+    <value>featureLocationSummaryLabel</value>
   </data>
   <data name="hintLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>30, 289</value>
@@ -299,17 +314,20 @@
   <data name="messageLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
+  <data name="&gt;&gt;featureLocationSummaryLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;removeRadioButton.Name" xml:space="preserve">
     <value>removeRadioButton</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+  <data name="messageLabel.Text" xml:space="preserve">
+    <value>Another version of {SolutionTitle} is already installed. What would you like to do?</value>
   </data>
-  <data name="&gt;&gt;dodeactivateFeaturesChoice.Name" xml:space="preserve">
-    <value>dodeactivateFeaturesChoice</value>
+  <data name="upgradeRadioButton.Text" xml:space="preserve">
+    <value>Upgrade</value>
   </data>
   <data name="&gt;&gt;hintLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="removeDescriptionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>46, 163</value>
@@ -324,7 +342,7 @@
     <value>Remove</value>
   </data>
   <data name="&gt;&gt;dodeactivateFeaturesChoice.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="messageLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>385, 13</value>
