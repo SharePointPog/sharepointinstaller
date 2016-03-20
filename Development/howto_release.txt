@@ -1,0 +1,22 @@
+sharepointinstaller howto_release.txt
+
+It takes three commits
+
+Release name model: SharePointInstaller-SP2007-V1.4.0
+
+#1)
+
+Set version in Development/Source/Properties/AssemblyInfo.cs
+Record version in Development/ChangeLog and Development/readme.html
+Commit
+
+#2)
+Update commit tag from previous step into Development/Source/Properties/AssemblyInfo.cs
+Commit
+
+#3)
+Compile final binary
+Assemble files into new Release folder
+Commit
+Publish on github: https://github.com/SharePointPog/sharepointinstaller
+Publish on codeplex: https://sharepointinstaller.codeplex.com
