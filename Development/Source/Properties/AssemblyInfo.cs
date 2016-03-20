@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CodePlex.SharePointInstaller")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("github repo after 8ffb2e973fc9841f3ef227c8d74f118e1373f337")]
+[assembly: AssemblyCompany("github repo after da1dacb3b0b22c1f6e3928a82af6f41c366ca1f5")]
 [assembly: AssemblyProduct("SharePoint Solution Installer")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
