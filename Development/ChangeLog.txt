@@ -81,3 +81,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  Rename sln & csproj: remove 2013 suffixes
  Fix App.config
  Release SharePointInstaller-SP2013-V1.4.0
+ Update AssemblyCompany with latest relevant git commit hash
