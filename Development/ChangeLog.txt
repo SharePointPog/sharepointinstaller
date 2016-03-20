@@ -79,3 +79,4 @@ SharePoint Solution Installer Development V1 ChangeLog
    CodePlex.SharePointInstaller 2013.csproj & SharePoint Solution Installer 2013.sln
  Delete obsolete file Development/Source/CodePlex.SharePointInstaller.csproj.vspscc
  Release 1.4.0.0
+ Update AssemblyCompany with latest relevant git commit hash
