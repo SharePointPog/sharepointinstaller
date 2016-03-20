@@ -2,7 +2,7 @@ sharepointinstaller howto_release.txt
 
 It takes three commits
 
-Release name model: SharePointInstaller-SP2007-V1.4.0
+Release name model: SharePointInstaller-SP2013-V1.4.0
 
 #1)
 
