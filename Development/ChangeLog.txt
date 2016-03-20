@@ -70,3 +70,6 @@ SharePoint Solution Installer Development V1 ChangeLog
 2016-03-14, Perry
  Fix Microsoft.SharePoint.dll reference to point to installed & get rid of copy
  Delete unused folders BuildProcessTemplates & "Development V2"
+
+2016-03-20, Perry
+ Add distribution readme.html to Development source
