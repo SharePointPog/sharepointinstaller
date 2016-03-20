@@ -80,3 +80,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  Fix SP2013 solution (.NET 4.5, and add LocationDisplay.cs)
  Rename sln & csproj: remove 2013 suffixes
  Fix App.config
+ Release SharePointInstaller-SP2013-V1.4.0
