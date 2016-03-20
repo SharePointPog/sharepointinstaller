@@ -78,3 +78,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  Delete obsolete SP2007/SP2010 project & solution files
   SharePoint Solution Installer.sln & CodePlex.SharePointInstaller.csproj
  Fix SP2013 solution (.NET 4.5, and add LocationDisplay.cs)
+ Rename sln & csproj: remove 2013 suffixes

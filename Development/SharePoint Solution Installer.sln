@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePlex.SharePointInstaller 2013", "Source\CodePlex.SharePointInstaller 2013.csproj", "{825F2C99-8758-4171-B8BC-988C3D2926E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodePlex.SharePointInstaller", "Source\CodePlex.SharePointInstaller.csproj", "{825F2C99-8758-4171-B8BC-988C3D2926E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
