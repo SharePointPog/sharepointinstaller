@@ -77,3 +77,4 @@ SharePoint Solution Installer Development V1 ChangeLog
  Delete obsolete file Development/SharePoint Solution Installer.vssscc
  Delete SP2013-specific files (from this SP2007 branch)
    CodePlex.SharePointInstaller 2013.csproj & SharePoint Solution Installer 2013.sln
+ Delete obsolete file Development/Source/CodePlex.SharePointInstaller.csproj.vspscc
