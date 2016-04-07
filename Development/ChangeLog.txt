@@ -82,3 +82,7 @@ SharePoint Solution Installer Development V1 ChangeLog
  Fix App.config
  Release SharePointInstaller-SP2013-V1.4.0
  Update AssemblyCompany with latest relevant git commit hash
+
+2016-04-07, Perry
+ Change activate & deactivate checkboxes on upgrade control
+   to be wider and not auto-sized
