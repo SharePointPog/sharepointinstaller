@@ -452,6 +452,7 @@ namespace CodePlex.SharePointInstaller
           Form.StoreNextTitle(Resources.CommonUIStrings.controlTitleWebApplicationDeployment);
           Form.ContentControls.Add(Program.CreateWebAppDeploymentTargetsControl());
       }
+      // Have user choose site collections if scope is site collection
       if (InstallConfiguration.FeatureScope == Microsoft.SharePoint.SPFeatureScope.Site)
       {
           ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
@@ -462,7 +463,11 @@ namespace CodePlex.SharePointInstaller
           else
           {
               Form.StoreNextTitle(Resources.CommonUIStrings.controlTitleSiteDeployment);
-              Form.ContentControls.Add(Program.CreateSiteCollectionDeploymentTargetsControl());
+              // For now try to assign all listed features for all specified site collections
+              // This is not ideal, but at install time we don't know what scope each of these features is
+              // This is why we need optional scope modifiers in feature list
+              InstallerControl ctl = Program.CreateSiteCollectionDeploymentTargetsControl(featureIds);
+              Form.ContentControls.Add(ctl);
           }
       }
 

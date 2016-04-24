@@ -90,3 +90,4 @@ SharePoint Solution Installer Development V1 ChangeLog
    InstallProcessControl.FeaturedSiteCollectionList
    InstallProcessControl.RecordFeaturedSites
  Rename InstallConfiguration.FeatureId to FeatureIdList
+ Copy in changes from trunk (pass features to site collection deployment page)

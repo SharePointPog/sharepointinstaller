@@ -223,8 +223,6 @@ namespace CodePlex.SharePointInstaller
               }
               else if (featureScope == SPFeatureScope.Site)
               {
-                  // TODO: Revise site collection choice to produce FeatureLocs structure
-                  // and get rid of SiteCollectionLocs
                   siteCollectionLocs = options.SiteCollectionTargets;
                   if (siteCollectionLocs == null || siteCollectionLocs.Count == 0)
                   {

@@ -276,12 +276,15 @@ namespace CodePlex.SharePointInstaller
         return FeatureScopeInfo.HasScope(scope);
     }
 
-    // Modif JPI - Début
+    // Modif JPI - Dbut
+    private static List<Guid?> _theFeatureIdList = null;
     internal static ReadOnlyCollection<Guid?> FeatureIdList
     {
       get
       {
-          List<Guid?> _guidArray = new List<Guid?>();
+          if (_theFeatureIdList != null) { return _theFeatureIdList.AsReadOnly(); }
+
+          _theFeatureIdList = new List<Guid?>();
           string valueStr = ConfigurationManager.AppSettings[ConfigProps.FeatureId];
         //
         // Backwards compatibility with old configuration files before site collection features allowed
@@ -298,11 +301,11 @@ namespace CodePlex.SharePointInstaller
             {
                 foreach (string _strGuid in _strGuidArray)
                 {
-                    _guidArray.Add(new Guid(_strGuid));
+                    _theFeatureIdList.Add(new Guid(_strGuid));
                 }
             }
         }
-        return _guidArray.AsReadOnly();
+        return _theFeatureIdList.AsReadOnly();
       }
     }
     // Modif JPI - Fin
