@@ -97,3 +97,5 @@ SharePoint Solution Installer Development V1 ChangeLog
  Rename InstallConfiguration.FeatureId to FeatureIdList
  Change InstallConfiguration.FeatureId from List to ReadOnlyCollection
   and cache it
+ Pass features id list into SiteCollectionDeploymentTargetsControl
+   so that it can include them into the site feature locs it creates

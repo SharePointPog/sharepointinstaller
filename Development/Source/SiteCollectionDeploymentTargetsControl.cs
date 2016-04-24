@@ -44,8 +44,10 @@ namespace CodePlex.SharePointInstaller
 
     #region Constructor
 
-    public SiteCollectionDeploymentTargetsControl()
+    private ReadOnlyCollection<Guid?> _featureIds;
+    public SiteCollectionDeploymentTargetsControl(ReadOnlyCollection<Guid?> featureIds)
     {
+      _featureIds = featureIds;
       InitializeComponent();
 
       siteCollectionsTreeView.AfterCheck += new TreeViewEventHandler(SiteCollectionsTreeView_AfterCheck);
@@ -80,6 +82,7 @@ namespace CodePlex.SharePointInstaller
                     try
                     {
                         SiteLoc siteLoc = new SiteLoc(siteCollection);
+                        siteLoc.featureList.AddRange(_featureIds); // add all known features for now (be nice to let user choose)
                         options.SiteCollectionTargets.Add(siteLoc);
                     }
                     finally
@@ -100,6 +103,7 @@ namespace CodePlex.SharePointInstaller
                     if (siteCollInfo != null)
                     {
                         SiteLoc siteLoc = new SiteLoc(siteCollInfo.SiteCollection);
+                        siteLoc.featureList.AddRange(_featureIds); // add all known features for now (be nice to let user choose)
                         options.SiteCollectionTargets.Add(siteLoc);
                     }
                   }

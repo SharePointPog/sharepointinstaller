@@ -14,6 +14,7 @@
 /**************************************************************************************/
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Principal;
 using System.Windows.Forms;
@@ -150,9 +151,9 @@ namespace CodePlex.SharePointInstaller
         return control;
     }
 
-    internal static InstallerControl CreateSiteCollectionDeploymentTargetsControl()
+    internal static InstallerControl CreateSiteCollectionDeploymentTargetsControl(ReadOnlyCollection<Guid?> featureIds)
     {
-        InstallerControl control = new SiteCollectionDeploymentTargetsControl();
+        InstallerControl control = new SiteCollectionDeploymentTargetsControl(featureIds);
         control.Title = Resources.CommonUIStrings.controlTitleSiteDeployment;
         control.SubTitle = Resources.CommonUIStrings.controlSubTitleSiteDeployment;
         return control;
