@@ -24,43 +24,6 @@ namespace CodePlex.SharePointInstaller
             myOperation = operation;
             myList = list;
         }
-/*
-        private void ReportSiteFeatureActivations()
-        {
-            IList<SiteLoc> featuredSites = InstallProcessControl.GetFeaturedSiteCollections();
-
-            myList.View = View.Details;
-            myList.Columns.Clear();
-            myList.Columns.Add("WebApp", 150);
-            myList.Columns.Add("Site Collection", 150);
-            if (InstallConfiguration.FeatureId.Count > 1)
-            {
-                myList.Columns.Add("#Features", 50);
-            }
-
-            foreach (SiteLoc siteloc in featuredSites)
-            {
-                try
-                {
-                    using (SPSite site = new SPSite(siteloc.SiteId))
-                    {
-                        string webappName = GetWebAppName(site.WebApplication);
-                        ListViewItem item = new ListViewItem(webappName);
-                        item.SubItems.Add(site.RootWeb.Title);
-                        if (InstallConfiguration.FeatureId.Count > 1)
-                        {
-                            item.SubItems.Add(string.Format("{0}/{1}", siteloc.featureList.Count, InstallConfiguration.FeatureId.Count));
-                        }
-                        myList.Items.Add(item);
-                    }
-                }
-                catch (Exception exc)
-                {
-                    myList.Items.Add("Exception(" + siteloc.SiteId.ToString() + "): " + exc.Message);
-                }
-            }
-        }
-*/
         private void AddLocationItemToDisplay(SPFeatureScope scope, string webappTitle, string siteTitle, string webTitle, int featureCount)
         {
             string scopeString = (scope == SPFeatureScope.WebApplication ? "WebApp" : scope.ToString());

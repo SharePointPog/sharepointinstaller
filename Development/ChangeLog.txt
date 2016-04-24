@@ -87,3 +87,10 @@ SharePoint Solution Installer Development V1 ChangeLog
  Change activate & deactivate checkboxes on upgrade control
    to be wider and not auto-sized
  Bump version from 1.4.0.0 to 1.4.1.0 (odd for development)
+
+2016-04-24, Perry
+ Remove obsolete code:
+   ActivationReporter.ReportSiteFeatureActivations (already commented out)
+   InstallProcessControl.GetFeaturedSiteCollections
+   InstallProcessControl.FeaturedSiteCollectionList
+   InstallProcessControl.RecordFeaturedSites
