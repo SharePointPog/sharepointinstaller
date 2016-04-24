@@ -79,7 +79,8 @@ namespace CodePlex.SharePointInstaller
                 {
                     try
                     {
-                        options.SiteCollectionTargets.Add(new SiteLoc(siteCollection));
+                        SiteLoc siteLoc = new SiteLoc(siteCollection);
+                        options.SiteCollectionTargets.Add(siteLoc);
                     }
                     finally
                     {
@@ -98,7 +99,8 @@ namespace CodePlex.SharePointInstaller
                     SiteCollectionInfo siteCollInfo = siteCollTreeNode.Tag as SiteCollectionInfo;
                     if (siteCollInfo != null)
                     {
-                        options.SiteCollectionTargets.Add(new SiteLoc(siteCollInfo.SiteCollection));
+                        SiteLoc siteLoc = new SiteLoc(siteCollInfo.SiteCollection);
+                        options.SiteCollectionTargets.Add(siteLoc);
                     }
                   }
                 }

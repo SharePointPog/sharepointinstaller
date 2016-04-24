@@ -94,3 +94,6 @@ SharePoint Solution Installer Development V1 ChangeLog
    InstallProcessControl.GetFeaturedSiteCollections
    InstallProcessControl.FeaturedSiteCollectionList
    InstallProcessControl.RecordFeaturedSites
+ Rename InstallConfiguration.FeatureId to FeatureIdList
+ Change InstallConfiguration.FeatureId from List to ReadOnlyCollection
+  and cache it
