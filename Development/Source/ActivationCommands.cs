@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using Microsoft.SharePoint.Administration;
 using Microsoft.SharePoint;
@@ -15,7 +16,7 @@ namespace CodePlex.SharePointInstaller
             protected FeatureCommand(InstallProcessControl parent) : base(parent) { }
 
             // Modif JPI - Début
-            protected static void DeactivateFeature(List<Guid?> featureIds)
+            protected static void DeactivateFeature(ReadOnlyCollection<Guid?> featureIds)
             {
                 try
                 {
@@ -63,7 +64,7 @@ namespace CodePlex.SharePointInstaller
                 try
                 {
                     // Modif JPI - Début
-                    List<Guid?> featureIds = InstallConfiguration.FeatureId;
+                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
                     if (featureIds != null && featureIds.Count > 0)
                     {
                         foreach (Guid? featureId in featureIds)
@@ -107,7 +108,7 @@ namespace CodePlex.SharePointInstaller
                 try
                 {
                     // Modif JPI - Début
-                    List<Guid?> featureIds = InstallConfiguration.FeatureId;
+                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
                     if (featureIds != null && featureIds.Count > 0)
                     {
                         foreach (Guid? featureId in featureIds)
@@ -190,7 +191,7 @@ namespace CodePlex.SharePointInstaller
                 {
                     log.Info(CommonUIStrings.logFeatureDeactivate);
                 }
-                List<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -359,7 +360,7 @@ namespace CodePlex.SharePointInstaller
                 {
                     log.Info(CommonUIStrings.logFeatureDeactivate);
                 }
-                List<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -478,7 +479,7 @@ namespace CodePlex.SharePointInstaller
             {
                 log.Info(this.Description);
 
-                List<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);

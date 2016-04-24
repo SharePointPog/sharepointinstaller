@@ -13,6 +13,7 @@
 /**********************************************************************/
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -453,7 +454,7 @@ namespace CodePlex.SharePointInstaller
       }
       if (InstallConfiguration.FeatureScope == Microsoft.SharePoint.SPFeatureScope.Site)
       {
-          List<Guid?> featureIds = InstallConfiguration.FeatureId;
+          ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
           if (featureIds == null || featureIds.Count == 0)
           {
               LogManager.GetLogger().Warn(Resources.CommonUIStrings.skippingSiteSelectionNoFeature);

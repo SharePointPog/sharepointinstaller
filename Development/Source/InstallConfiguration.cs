@@ -21,6 +21,7 @@
 /******************************************************************/
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Configuration;
 using System.Text;
 
@@ -276,7 +277,7 @@ namespace CodePlex.SharePointInstaller
     }
 
     // Modif JPI - Début
-    internal static List<Guid?> FeatureId
+    internal static ReadOnlyCollection<Guid?> FeatureId
     {
       get
       {
@@ -301,7 +302,7 @@ namespace CodePlex.SharePointInstaller
                 }
             }
         }
-        return _guidArray;
+        return _guidArray.AsReadOnly();
       }
     }
     // Modif JPI - Fin
