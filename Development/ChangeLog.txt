@@ -89,3 +89,4 @@ SharePoint Solution Installer Development V1 ChangeLog
    InstallProcessControl.GetFeaturedSiteCollections
    InstallProcessControl.FeaturedSiteCollectionList
    InstallProcessControl.RecordFeaturedSites
+ Rename InstallConfiguration.FeatureId to FeatureIdList

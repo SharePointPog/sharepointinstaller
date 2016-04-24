@@ -243,9 +243,9 @@ namespace CodePlex.SharePointInstaller
     private static FeatureScopeInfoType GetFeatureScopeInfo()
     {
         FeatureScopeInfoType fsinfo = new FeatureScopeInfoType();
-        if (InstallConfiguration.FeatureId != null)
+        if (InstallConfiguration.FeatureIdList != null)
         {
-            foreach (Guid? guid in InstallConfiguration.FeatureId)
+            foreach (Guid? guid in InstallConfiguration.FeatureIdList)
             {
                 if (guid == null) continue; // Perry, 2010-10-06: I don't know why we allow null GUIDs in this list anyway
                 SPFeatureDefinition fdef = SPFarm.Local.FeatureDefinitions[guid.Value];
@@ -277,7 +277,7 @@ namespace CodePlex.SharePointInstaller
     }
 
     // Modif JPI - Début
-    internal static ReadOnlyCollection<Guid?> FeatureId
+    internal static ReadOnlyCollection<Guid?> FeatureIdList
     {
       get
       {

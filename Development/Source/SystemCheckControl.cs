@@ -454,7 +454,7 @@ namespace CodePlex.SharePointInstaller
       }
       if (InstallConfiguration.FeatureScope == Microsoft.SharePoint.SPFeatureScope.Site)
       {
-          ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+          ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
           if (featureIds == null || featureIds.Count == 0)
           {
               LogManager.GetLogger().Warn(Resources.CommonUIStrings.skippingSiteSelectionNoFeature);
@@ -914,7 +914,7 @@ namespace CodePlex.SharePointInstaller
             try
             {
                 string checkResult = "?";
-                if (InstallConfiguration.FeatureId == null)
+                if (InstallConfiguration.FeatureIdList == null)
                 {
                     // TODO: Perry, 2010-10-06, l10n this
                     checkResult = "No features specified";
@@ -922,7 +922,7 @@ namespace CodePlex.SharePointInstaller
                     return SystemCheckResult.Success;
                 }
                 int newFeatures = 0, installedFeatures = 0, otherFeatures = 0, nosolFeatures = 0;
-                foreach (Guid? guid in InstallConfiguration.FeatureId)
+                foreach (Guid? guid in InstallConfiguration.FeatureIdList)
                 {
                     if (guid == null) continue; // Perry, 2010-10-06: I don't know why we allow null GUIDs in this list anyway
                     try
@@ -966,7 +966,7 @@ namespace CodePlex.SharePointInstaller
                 else
                 {
                     checkResult = InstallConfiguration.FormatString(CommonUIStrings.featuresMixedText
-                        , InstallConfiguration.FeatureId.Count, newFeatures, installedFeatures, otherFeatures, nosolFeatures
+                        , InstallConfiguration.FeatureIdList.Count, newFeatures, installedFeatures, otherFeatures, nosolFeatures
                         );
                 }
                 this.OkText = checkResult;

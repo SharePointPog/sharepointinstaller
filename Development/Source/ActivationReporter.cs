@@ -31,7 +31,7 @@ namespace CodePlex.SharePointInstaller
             item.SubItems.Add(webappTitle);
             item.SubItems.Add(siteTitle);
             item.SubItems.Add(webTitle);
-            if (InstallConfiguration.FeatureId.Count > 1)
+            if (InstallConfiguration.FeatureIdList.Count > 1)
             {
                 item.SubItems.Add(featureCount.ToString());
             }
@@ -46,7 +46,7 @@ namespace CodePlex.SharePointInstaller
             myList.Columns.Add("WebApp", 100);
             myList.Columns.Add("Site", 100);
             myList.Columns.Add("Web", 100);
-            if (InstallConfiguration.FeatureId.Count > 1)
+            if (InstallConfiguration.FeatureIdList.Count > 1)
             {
                 myList.Columns.Add("#Features", 30);
             }

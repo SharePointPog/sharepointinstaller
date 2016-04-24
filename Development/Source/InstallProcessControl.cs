@@ -344,7 +344,7 @@ namespace CodePlex.SharePointInstaller
 
         FeaturedLocationList = new FeatureLocations();
         // TODO: Perry, 2010-10-14: use FeaturedOperation (except then must remove feature count from system check)
-        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
         if (featureIds == null || featureIds.Count == 0)
         {
             log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -431,7 +431,7 @@ namespace CodePlex.SharePointInstaller
     /// If any found, add this feature location to the FeaturedLocationList
     static private void RecordActivatedFeatures(FeatureLocations FeaturedLocationList, FeatureLoc floc, SPFeatureCollection features)
     {
-        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
         List<Guid> featuresFound = null;
 
         foreach (Guid? featureId in featureIds)
@@ -518,7 +518,7 @@ namespace CodePlex.SharePointInstaller
             return FeaturedWebsList;
 
         FeaturedWebsList = new List<WebLoc>();
-        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
         if (featureIds == null || featureIds.Count == 0)
         {
             log.Warn(CommonUIStrings.logNoFeaturesSpecified);

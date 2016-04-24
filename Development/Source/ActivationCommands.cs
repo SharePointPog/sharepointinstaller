@@ -55,7 +55,7 @@ namespace CodePlex.SharePointInstaller
             {
                 get
                 {
-                    return string.Format(CommonUIStrings.activateFarmFeatureMessage, InstallConfiguration.FeatureId.Count);
+                    return string.Format(CommonUIStrings.activateFarmFeatureMessage, InstallConfiguration.FeatureIdList.Count);
                 }
             }
 
@@ -64,7 +64,7 @@ namespace CodePlex.SharePointInstaller
                 try
                 {
                     // Modif JPI - Début
-                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
                     if (featureIds != null && featureIds.Count > 0)
                     {
                         foreach (Guid? featureId in featureIds)
@@ -86,7 +86,7 @@ namespace CodePlex.SharePointInstaller
 
             protected internal override bool Rollback()
             {
-                DeactivateFeature(InstallConfiguration.FeatureId);
+                DeactivateFeature(InstallConfiguration.FeatureIdList);
                 return true;
             }
         }
@@ -99,7 +99,7 @@ namespace CodePlex.SharePointInstaller
             {
                 get
                 {
-                    return string.Format(CommonUIStrings.deactivateFarmFeatureMessage, InstallConfiguration.FeatureId.Count);
+                    return string.Format(CommonUIStrings.deactivateFarmFeatureMessage, InstallConfiguration.FeatureIdList.Count);
                 }
             }
 
@@ -108,7 +108,7 @@ namespace CodePlex.SharePointInstaller
                 try
                 {
                     // Modif JPI - Début
-                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+                    ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
                     if (featureIds != null && featureIds.Count > 0)
                     {
                         foreach (Guid? featureId in featureIds)
@@ -191,7 +191,7 @@ namespace CodePlex.SharePointInstaller
                 {
                     log.Info(CommonUIStrings.logFeatureDeactivate);
                 }
-                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -360,7 +360,7 @@ namespace CodePlex.SharePointInstaller
                 {
                     log.Info(CommonUIStrings.logFeatureDeactivate);
                 }
-                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -479,7 +479,7 @@ namespace CodePlex.SharePointInstaller
             {
                 log.Info(this.Description);
 
-                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
+                ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureIdList;
                 if (featureIds == null || featureIds.Count == 0)
                 {
                     log.Warn(CommonUIStrings.logNoFeaturesSpecified);
@@ -556,7 +556,7 @@ namespace CodePlex.SharePointInstaller
                 : CommonUIStrings.deactivatingFeaturesMessage);
             return String.Format(fmt
                 , locs.ActivationsCount
-                , InstallConfiguration.FeatureId.Count
+                , InstallConfiguration.FeatureIdList.Count
                 , locs.LocationsCount
             );
         }
