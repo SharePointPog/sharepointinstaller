@@ -84,3 +84,8 @@ SharePoint Solution Installer Development V1 ChangeLog
 
 2016-04-24, Perry Rapp
  Change InstallConfiguration.FeatureId from List to ReadOnlyCollection
+ Remove obsolete code:
+   ActivationReporter.ReportSiteFeatureActivations (already commented out)
+   InstallProcessControl.GetFeaturedSiteCollections
+   InstallProcessControl.FeaturedSiteCollectionList
+   InstallProcessControl.RecordFeaturedSites

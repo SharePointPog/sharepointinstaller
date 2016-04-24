@@ -322,61 +322,6 @@ namespace CodePlex.SharePointInstaller
       timer.Start();
     }
 
-    private static IList<SiteLoc> FeaturedSiteCollectionList = null;
-    public static IList<SiteLoc> GetFeaturedSiteCollections()
-    {
-        if (FeaturedSiteCollectionList != null)
-            return FeaturedSiteCollectionList;
-
-        FeaturedSiteCollectionList = new List<SiteLoc>();
-        ReadOnlyCollection<Guid?> featureIds = InstallConfiguration.FeatureId;
-        if (featureIds == null || featureIds.Count == 0)
-        {
-            log.Warn(CommonUIStrings.logNoFeaturesSpecified);
-            return FeaturedSiteCollectionList;
-        }
-        foreach (SPWebApplication webApp in SPWebService.AdministrationService.WebApplications)
-        {
-            RecordFeaturedSites(webApp, FeaturedSiteCollectionList, featureIds);
-        }
-
-        foreach (SPWebApplication webApp in SPWebService.ContentService.WebApplications)
-        {
-            RecordFeaturedSites(webApp, FeaturedSiteCollectionList, featureIds);
-        }
-
-        return FeaturedSiteCollectionList;
-    }
-    private static void RecordFeaturedSites(SPWebApplication webApp, IList<SiteLoc> res, ReadOnlyCollection<Guid?> featureIds)
-    {
-        foreach (SPSite siteCollection in webApp.Sites)
-        {
-            try
-            {
-                List<Guid?> featuresFound = null;
-
-                foreach (Guid? featureId in featureIds)
-                {
-                    if (featureId == null) continue;
-                    if (siteCollection.Features[featureId.Value] == null) continue;
-                    if (featuresFound == null) { featuresFound = new List<Guid?>(); }
-                    featuresFound.Add(featureId);
-                }
-                if (featuresFound != null)
-                {
-                    SiteLoc siteLoc = new SiteLoc(siteCollection);
-                    siteLoc.featureList = featuresFound;
-                    res.Add(siteLoc);
-                }
-            }
-            finally
-            {
-                // guarantee SPSite is released ASAP even in face of exception
-                siteCollection.Dispose();
-            }
-        }
-    }
-
     private static FeatureLocations FeaturedLocationList = null;
     private static InstallOperation FeaturedOperation;
 
