@@ -20,10 +20,10 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CodePlex.SharePointInstaller")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("github repo after ac95ca8f11a4448f7db648adfa4ce3e4403e9d34")]
+[assembly: AssemblyCompany("github repo after 8314e8d30f95b36cbb27569b6621e42eb9d7b18f")]
 [assembly: AssemblyProduct("SharePoint Solution Installer")]
 [assembly: AssemblyCopyright("")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("SPP 2017")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
@@ -41,5 +41,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion("1.4.1.1")]
-[assembly: AssemblyFileVersion("1.4.1.1")]
+[assembly: AssemblyVersion("1.4.2.0")]
+[assembly: AssemblyFileVersion("1.4.2.0")]

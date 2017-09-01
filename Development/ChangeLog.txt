@@ -103,3 +103,5 @@ SharePoint Solution Installer Development V1 ChangeLog
 
 2017-09-01, SPP
  Make install timeout configurable
+ Bump version from 1.4.1.1 to 1.4.2.0 (even for release)
+ Make release folder for 1.4.2.0
