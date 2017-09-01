@@ -37,7 +37,14 @@ namespace CodePlex.SharePointInstaller
   {
     private static readonly ILog log = LogManager.GetLogger();
 
-    private static readonly TimeSpan JobTimeout = TimeSpan.FromMinutes(15);
+    private static TimeSpan JobTimeout
+    {
+        get
+        {
+            int timeoutMinutes = InstallConfiguration.InstallTimeoutMinutes;
+            return TimeSpan.FromMinutes(timeoutMinutes);
+        }
+    }
 
     private System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
     private CommandList executeCommands;

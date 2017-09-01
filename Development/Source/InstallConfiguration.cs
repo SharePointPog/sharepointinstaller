@@ -73,6 +73,7 @@ namespace CodePlex.SharePointInstaller
       public const string SSPRelativeConfigLink = "SSPRelativeConfigLink";
       public const string DocumentationUrl = "DocumentationUrl";
       public const string CompatibilityLevel = "CompatibilityLevel";
+      public const string InstallTimeoutMinutes = "InstallTimeoutMinutes";
     }
 
     #endregion
@@ -405,6 +406,17 @@ namespace CodePlex.SharePointInstaller
         {
             string str = Stringify(ConfigurationManager.AppSettings[ConfigProps.CompatibilityLevel]);
             return str;
+        }
+    }
+
+    internal static int InstallTimeoutMinutes
+    {
+        get
+        {
+            string str = Stringify(ConfigurationManager.AppSettings[ConfigProps.InstallTimeoutMinutes]);
+            int timeout = 15;
+            int.TryParse(str, out timeout);
+            return timeout;
         }
     }
 
