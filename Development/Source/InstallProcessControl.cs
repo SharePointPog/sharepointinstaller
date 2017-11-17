@@ -778,6 +778,13 @@ namespace CodePlex.SharePointInstaller
         {
           SPFarm farm = SPFarm.Local;
           SPSolution solution = farm.Solutions.Add(filename);
+          //SharePoint 2016 randomly fails to deploy a newly added solution. Error: "xxxx.wsp" does not exist in the solution store..
+          //It seems that even though adding a solution returns and all properties say that it's been added, it still is being processed in the background and can't be deployed.
+          //Unfortunately there doesn't seem to be any way to tell if the adding has finished. All properties return the same value both immediately after the add and several minutes later.
+          //The only way I can get it to work consistently is by adding a 10 second pause before continuing to the next step. Even a five second pause causes random failures.
+          //Unfortunately that is only on my dev machine, so it is possible that the pause is not long enough in other environments.
+          //This is definitely a sharepoint bug, as it can be reproduce in powershell by running install-spsolution immediately after add-spsolution.
+          System.Threading.Thread.Sleep(10000);
           return true;
         }
 
