@@ -414,9 +414,15 @@ namespace CodePlex.SharePointInstaller
         get
         {
             string str = Stringify(ConfigurationManager.AppSettings[ConfigProps.InstallTimeoutMinutes]);
-            int timeout = 15;
-            int.TryParse(str, out timeout);
-            return timeout;
+            int timeout;
+            if (int.TryParse(str, out timeout))
+            {
+                return timeout;
+            }
+            else
+            {
+                return 15;
+            }
         }
     }
 

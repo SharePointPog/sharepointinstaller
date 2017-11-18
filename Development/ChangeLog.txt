@@ -105,3 +105,8 @@ SharePoint Solution Installer Development V1 ChangeLog
  Make install timeout configurable
  Bump version from 1.4.1.1 to 1.4.2.0 (even for release)
  Make release folder for 1.4.2.0
+
+2017-11-17 ccoulson
+  Fix install timeout to work when config entry missing
+  Make compatible with SharePoint 2016
+  Update version to 1.5.0.0

@@ -670,6 +670,7 @@ namespace CodePlex.SharePointInstaller
         case 12: return "SPAdmin";
         case 14: return "SPAdminV4";
         case 15: return "SPAdminV4";
+        case 16: return "SPAdminV4";
         default: throw new Exception("Unknown SharePoint hive number: " + hive.ToString());
       }
     }
@@ -721,6 +722,7 @@ namespace CodePlex.SharePointInstaller
             case 12: return "SPTimerV3";
             case 14: return "SPTimerV4";
             case 15: return "SPTimerV4";
+            case 16: return "SPTimerV4";
             default: throw new Exception("Unknown SharePoint hive number: " + hive.ToString());
         }
     }
